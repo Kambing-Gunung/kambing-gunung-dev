@@ -1,0 +1,391 @@
+/* ========================================
+   UTILITIES - Design System Specific
+   ========================================
+   
+   Tailwind handles:
+   - Layout, Flex, Grid, Display
+   - Sizing, Position, Overflow
+   - Responsive, Spacing
+   
+   This file focuses on design system:
+   - Colors & Design Tokens
+   - Hover & Interactive Effects
+   - Glass & Gradient Effects
+   - Scrollbar & Selection
+   - Focus Rings
+   - Containers
+   ======================================== */
+
+/* ========================================
+   DESIGN SYSTEM COLORS
+   ======================================== */
+
+/* Background Colors */
+.bg-primary { background-color: var(--color-background-primary); }
+.bg-secondary { background-color: var(--color-background-secondary); }
+.bg-tertiary { background-color: var(--color-background-tertiary); }
+
+.bg-surface { background-color: var(--color-surface-primary); }
+.bg-surface-secondary { background-color: var(--color-surface-secondary); }
+.bg-surface-elevated { background-color: var(--color-surface-elevated); }
+.bg-surface-hover { background-color: var(--color-surface-hover); }
+
+/* Text Colors */
+.text-primary { color: var(--color-text-primary); }
+.text-secondary { color: var(--color-text-secondary); }
+.text-muted { color: var(--color-text-muted); }
+.text-disabled { color: var(--color-text-disabled); }
+
+/* Brand Colors */
+.text-primary-brand { color: var(--color-primary); }
+.text-secondary-brand { color: var(--color-secondary); }
+.text-highlight { color: var(--color-highlight); }
+
+/* Feedback Colors */
+.text-success { color: var(--color-success); }
+.text-warning { color: var(--color-warning); }
+.text-danger { color: var(--color-danger); }
+.text-info { color: var(--color-info); }
+
+/* ========================================
+   DESIGN SYSTEM BORDERS & RADIUS
+   ======================================== */
+
+/* Borders with Design Tokens */
+.border-subtle { border: 1px solid var(--color-border-subtle); }
+.border-default { border: 1px solid var(--color-border-default); }
+.border-strong { border: 1px solid var(--color-border-strong); }
+
+.border-t-subtle { border-top: 1px solid var(--color-border-subtle); }
+.border-t-default { border-top: 1px solid var(--color-border-default); }
+.border-t-strong { border-top: 1px solid var(--color-border-strong); }
+
+.border-b-subtle { border-bottom: 1px solid var(--color-border-subtle); }
+.border-b-default { border-bottom: 1px solid var(--color-border-default); }
+.border-b-strong { border-bottom: 1px solid var(--color-border-strong); }
+
+/* Design System Radius */
+.rounded-xs { border-radius: var(--radius-xs); }
+.rounded-sm { border-radius: var(--radius-sm); }
+.rounded-md { border-radius: var(--radius-md); }
+.rounded-lg { border-radius: var(--radius-lg); }
+.rounded-xl { border-radius: var(--radius-xl); }
+.rounded-full { border-radius: var(--radius-full); }
+
+/* ========================================
+   DESIGN SYSTEM SHADOWS
+   ======================================== */
+
+.shadow-sm { box-shadow: var(--shadow-sm); }
+.shadow-md { box-shadow: var(--shadow-md); }
+.shadow-lg { box-shadow: var(--shadow-lg); }
+.shadow-xl { box-shadow: var(--shadow-xl); }
+.shadow-none { box-shadow: none; }
+
+/* ========================================
+   HOVER EFFECTS - Interactive
+   ======================================== */
+
+/* Lift on Hover */
+.hover-lift {
+    transition: transform var(--duration-fast) var(--easing-out),
+                box-shadow var(--duration-fast) var(--easing-out);
+}
+
+.hover-lift:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Scale on Hover */
+.hover-scale {
+    transition: transform var(--duration-fast) var(--easing-out);
+}
+
+.hover-scale:hover {
+    transform: scale(1.02);
+}
+
+/* Opacity on Hover */
+.hover-opacity {
+    transition: opacity var(--duration-fast) var(--easing-out);
+}
+
+.hover-opacity:hover {
+    opacity: 0.8;
+}
+
+/* Brightness on Hover */
+.hover-brightness {
+    transition: filter var(--duration-fast) var(--easing-out);
+}
+
+.hover-brightness:hover {
+    filter: brightness(1.1);
+}
+
+/* Color Shift on Hover */
+.hover-color-shift {
+    transition: color var(--duration-fast) var(--easing-out),
+                background-color var(--duration-fast) var(--easing-out);
+}
+
+/* Underline Grow on Hover */
+.hover-underline-grow {
+    position: relative;
+    display: inline-block;
+}
+
+.hover-underline-grow::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-primary);
+    transition: width var(--duration-normal) var(--easing-out);
+}
+
+.hover-underline-grow:hover::after {
+    width: 100%;
+}
+
+/* ========================================
+   ANIMATION TRANSITIONS
+   ======================================== */
+
+/* Transition Speeds */
+.transition-fast {
+    transition: all var(--duration-fast) var(--easing-out);
+}
+
+.transition-normal {
+    transition: all var(--duration-normal) var(--easing-out);
+}
+
+.transition-slow {
+    transition: all var(--duration-slow) var(--easing-out);
+}
+
+/* Property-Specific Transitions */
+.transition-colors {
+    transition: color var(--duration-fast) var(--easing-out),
+                background-color var(--duration-fast) var(--easing-out),
+                border-color var(--duration-fast) var(--easing-out);
+}
+
+.transition-transform {
+    transition: transform var(--duration-normal) var(--easing-out);
+}
+
+.transition-opacity {
+    transition: opacity var(--duration-fast) var(--easing-out);
+}
+
+.transition-shadow {
+    transition: box-shadow var(--duration-fast) var(--easing-out);
+}
+
+/* ========================================
+   SCROLLBAR STYLING
+   ======================================== */
+
+/* Custom Scrollbar */
+.scrollbar-custom::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.scrollbar-custom::-webkit-scrollbar-track {
+    background: var(--color-surface-primary);
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb {
+    background: var(--color-border-default);
+    border-radius: 4px;
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb:hover {
+    background: var(--color-border-strong);
+}
+
+/* Hide Scrollbar but Keep Scrollable */
+.scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;     /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari and Opera */
+}
+
+/* ========================================
+   SELECTION STYLING
+   ======================================== */
+
+/* Custom Text Selection */
+.selection-primary::selection {
+    background-color: var(--color-primary);
+    color: var(--color-text-primary);
+}
+
+.selection-primary::-moz-selection {
+    background-color: var(--color-primary);
+    color: var(--color-text-primary);
+}
+
+.selection-secondary::selection {
+    background-color: var(--color-secondary);
+    color: var(--color-text-primary);
+}
+
+.selection-secondary::-moz-selection {
+    background-color: var(--color-secondary);
+    color: var(--color-text-primary);
+}
+
+/* ========================================
+   FOCUS RINGS
+   ======================================== */
+
+/* Design System Focus Ring */
+.focus-ring-primary {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+.focus-ring-primary:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+.focus-ring-secondary {
+    outline: 2px solid var(--color-secondary);
+    outline-offset: 2px;
+}
+
+.focus-ring-secondary:focus {
+    outline: 2px solid var(--color-secondary);
+    outline-offset: 2px;
+}
+
+/* Focus Visible Only */
+.focus-visible:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+/* ========================================
+   CONTAINERS
+   ======================================== */
+
+/* Max Width Containers */
+.container-xs { max-width: 24rem; }    /* 384px */
+.container-sm { max-width: 28rem; }    /* 448px */
+.container-md { max-width: 32rem; }    /* 512px */
+.container-lg { max-width: 36rem; }    /* 576px */
+
+/* Center Containers */
+.container-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Padded Containers */
+.container-px {
+    padding-left: var(--space-4);
+    padding-right: var(--space-4);
+}
+
+.container-px-lg {
+    padding-left: var(--space-6);
+    padding-right: var(--space-6);
+}
+
+/* ========================================
+   TEXT UTILITIES - DESIGN SYSTEM SPECIFIC
+   ======================================== */
+
+.truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.line-clamp-1 {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* ========================================
+   ANIMATION UTILITIES
+   ======================================== */
+
+/* Fade Animations */
+.animate-fade-in {
+    animation: fadeIn var(--duration-normal) var(--easing-out);
+}
+
+.animate-fade-out {
+    animation: fadeOut var(--duration-normal) var(--easing-out);
+}
+
+/* Slide Animations */
+.animate-slide-in-top {
+    animation: slideInTop var(--duration-normal) var(--easing-out);
+}
+
+.animate-slide-in-bottom {
+    animation: slideInBottom var(--duration-normal) var(--easing-out);
+}
+
+.animate-slide-in-left {
+    animation: slideInLeft var(--duration-normal) var(--easing-out);
+}
+
+.animate-slide-in-right {
+    animation: slideInRight var(--duration-normal) var(--easing-out);
+}
+
+/* Scale Animations */
+.animate-scale-in {
+    animation: scaleIn var(--duration-normal) var(--easing-out);
+}
+
+.animate-bounce-in {
+    animation: bounceIn var(--duration-normal) var(--easing-out);
+}
+
+/* Pulse Animation */
+.animate-pulse {
+    animation: pulse var(--duration-slow) ease-in-out infinite;
+}
+
+/* Shimmer Animation */
+.animate-shimmer {
+    animation: shimmer 2s infinite;
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0.2),
+        rgba(255, 255, 255, 0)
+    );
+    background-size: 1000px 100%;
+}

@@ -1,0 +1,165 @@
+/* ========================================
+   TYPOGRAPHY - Type Scale & Text Variants
+   ======================================== */
+
+/* Font Families */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Display - Hero Titles */
+.display {
+    font-size: var(--fs-display);
+    font-weight: var(--fw-bold);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--ls-normal);
+}
+
+/* Heading 1 - Page Titles */
+h1 {
+    font-size: var(--fs-h1);
+    font-weight: var(--fw-bold);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--ls-normal);
+    margin: 0;
+}
+
+/* Heading 2 - Section Titles */
+h2 {
+    font-size: var(--fs-h2);
+    font-weight: var(--fw-semibold);
+    line-height: var(--lh-normal);
+    letter-spacing: var(--ls-normal);
+    margin: 0;
+}
+
+/* Heading 3 - Card Titles */
+h3 {
+    font-size: var(--fs-h3);
+    font-weight: var(--fw-semibold);
+    line-height: var(--lh-normal);
+    letter-spacing: var(--ls-normal);
+    margin: 0;
+}
+
+/* Heading 4 - Small Section Titles */
+h4 {
+    font-size: var(--fs-h4);
+    font-weight: var(--fw-semibold);
+    line-height: var(--lh-relaxed);
+    letter-spacing: var(--ls-normal);
+    margin: 0;
+}
+
+/* Body Large - Intro Paragraphs */
+.body-lg {
+    font-size: var(--fs-body-lg);
+    font-weight: var(--fw-regular);
+    line-height: var(--lh-very-loose);
+    letter-spacing: var(--ls-normal);
+}
+
+/* Body Small - Secondary Content */
+.body-sm {
+    font-size: var(--fs-body-sm);
+    font-weight: var(--fw-regular);
+    line-height: var(--lh-loose);
+    letter-spacing: var(--ls-normal);
+}
+
+/* Caption - Labels & Helper Text */
+.caption {
+    font-size: var(--fs-caption);
+    font-weight: var(--fw-regular);
+    line-height: var(--lh-loose);
+    letter-spacing: var(--ls-normal);
+}
+
+/* Overline - Small Uppercase Labels */
+.overline {
+    font-size: var(--fs-overline);
+    font-weight: var(--fw-semibold);
+    line-height: var(--lh-loose);
+    letter-spacing: var(--ls-wide);
+    text-transform: uppercase;
+}
+
+/* ========================================
+   TEXT COLORS - Color Variants
+   ======================================== */
+
+.text-primary {
+    color: var(--color-text-primary);
+}
+
+.text-secondary {
+    color: var(--color-text-secondary);
+}
+
+.text-muted {
+    color: var(--color-text-muted);
+}
+
+.text-disabled {
+    color: var(--color-text-disabled);
+}
+
+/* Brand Colors */
+.text-primary-brand {
+    color: var(--color-primary);
+}
+
+.text-secondary-brand {
+    color: var(--color-secondary);
+}
+
+.text-highlight {
+    color: var(--color-highlight);
+}
+
+/* Feedback Colors */
+.text-success {
+    color: var(--color-success);
+}
+
+.text-warning {
+    color: var(--color-warning);
+}
+
+.text-danger {
+    color: var(--color-danger);
+}
+
+.text-info {
+    color: var(--color-info);
+}
+
+/* ========================================
+   TEXT STYLES - Font Weight & Decorations
+   ======================================== */
+
+.font-regular {
+    font-weight: var(--fw-regular);
+}
+
+.font-medium {
+    font-weight: var(--fw-medium);
+}
+
+.font-semibold {
+    font-weight: var(--fw-semibold);
+}
+
+.font-bold {
+    font-weight: var(--fw-bold);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}

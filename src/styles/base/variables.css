@@ -1,0 +1,188 @@
+:root {
+    /* ========================================
+       PRIMITIVE COLORS - Color Palette
+       ======================================== */
+
+    /* 🌌 Night Sky */
+    --sky-100: #5B6F97;
+    --sky-200: #465A84;
+    --sky-300: #34486B;
+    --sky-400: #253A57;
+    --sky-500: #172C42;
+    --sky-600: #0D2033;
+    --sky-700: #02151C;
+
+    /* 🏔 Mountain */
+    --mountain-100: #76828D;
+    --mountain-200: #5E6A75;
+    --mountain-300: #49545F;
+    --mountain-400: #37424D;
+    --mountain-500: #29333C;
+    --mountain-600: #1D252D;
+    --mountain-700: #141B21;
+
+    /* 🌲 Forest */
+    --forest-100: #7B9587;
+    --forest-200: #5F7A6B;
+    --forest-300: #476252;
+    --forest-400: #365042;
+    --forest-500: #283D31;
+    --forest-600: #1C2E24;
+    --forest-700: #121F18;
+
+    /* 🌕 Moonlight */
+    --moon-100: #F7F9FC;
+    --moon-200: #E7EDF5;
+    --moon-300: #D6DFEA;
+    --moon-400: #BECBDC;
+    --moon-500: #9FAFC2;
+    --moon-600: #7D8C9F;
+    --moon-700: #5F6C7D;
+
+    /* 🌫 Mist */
+    --mist-100: #E6EEF3;
+    --mist-200: #CCD8DF;
+    --mist-300: #B5C2CB;
+    --mist-400: #97A6B2;
+    --mist-500: #758391;
+    --mist-600: #596673;
+    --mist-700: #404B56;
+
+    /* ✨ Twilight Glow */
+    --glow-100: #FFDCC8;
+    --glow-200: #F9C4B0;
+    --glow-300: #F3AA9C;
+    --glow-400: #E68C88;
+    --glow-500: #CC6E77;
+    --glow-600: #A8576A;
+    --glow-700: #7C4358;
+
+    /* 🏠 Cabin Light */
+    --cabin-100: #FFF3D4;
+    --cabin-200: #FFE4A8;
+    --cabin-300: #FFD178;
+    --cabin-400: #F8BC49;
+    --cabin-500: #E89C28;
+    --cabin-600: #C97B18;
+    --cabin-700: #8A5312;
+
+    /* ========================================
+       SEMANTIC TOKENS - Design Tokens
+       ======================================== */
+
+    /* Background */
+    --color-background-primary: var(--sky-700);
+    --color-background-secondary: var(--sky-600);
+    --color-background-tertiary: var(--sky-500);
+
+    /* Surface */
+    --color-surface-primary: var(--mountain-600);
+    --color-surface-secondary: var(--mountain-500);
+    --color-surface-elevated: var(--mountain-400);
+    --color-surface-hover: var(--mountain-300);
+
+    /* Border */
+    --color-border-subtle: var(--mountain-500);
+    --color-border-default: var(--mountain-400);
+    --color-border-strong: var(--moon-600);
+
+    /* Content / Text */
+    --color-text-primary: var(--moon-100);
+    --color-text-secondary: var(--moon-300);
+    --color-text-muted: var(--moon-500);
+    --color-text-disabled: var(--moon-700);
+
+    /* Brand */
+    --color-primary: var(--glow-400);
+    --color-primary-hover: var(--glow-500);
+    --color-secondary: var(--forest-400);
+    --color-highlight: var(--cabin-300);
+
+    /* Feedback */
+    --color-success: var(--forest-300);
+    --color-warning: var(--cabin-400);
+    --color-danger: var(--glow-500);
+    --color-info: var(--sky-300);
+
+
+
+    /* ========================================
+       SPACING - 4px base unit scale
+       ======================================== */
+    --space-1: 0.25rem;    /* 4px */
+    --space-2: 0.5rem;     /* 8px */
+    --space-3: 0.75rem;    /* 12px */
+    --space-4: 1rem;       /* 16px */
+    --space-5: 1.25rem;    /* 20px */
+    --space-6: 1.5rem;     /* 24px */
+    --space-8: 2rem;       /* 32px */
+    --space-10: 2.5rem;    /* 40px */
+    --space-12: 3rem;      /* 48px */
+    --space-16: 4rem;      /* 64px */
+    --space-20: 5rem;      /* 80px */
+    --space-24: 6rem;      /* 96px */
+
+    /* ========================================
+       TYPOGRAPHY - Font Sizes
+       ======================================== */
+    --fs-display: 3rem;        /* 48px */
+    --fs-h1: 2.25rem;          /* 36px */
+    --fs-h2: 1.875rem;         /* 30px */
+    --fs-h3: 1.5rem;           /* 24px */
+    --fs-h4: 1.25rem;          /* 20px */
+    --fs-body-lg: 1.125rem;    /* 18px */
+    --fs-body: 1rem;           /* 16px */
+    --fs-body-sm: 0.875rem;    /* 14px */
+    --fs-caption: 0.75rem;     /* 12px */
+    --fs-overline: 0.6875rem;  /* 11px */
+
+    /* Font Weight */
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+
+    /* Line Height */
+    --lh-tight: 1.2;      /* 120% */
+    --lh-normal: 1.3;     /* 130% */
+    --lh-relaxed: 1.4;    /* 140% */
+    --lh-loose: 1.5;      /* 150% */
+    --lh-very-loose: 1.7; /* 170% */
+
+    /* Letter Spacing */
+    --ls-tight: -0.02em;
+    --ls-normal: 0;
+    --ls-wide: 0.04em;
+
+    /* ========================================
+       RADIUS - Border Radius Scale
+       ======================================== */
+    --radius-xs: 0.25rem;   /* 4px */
+    --radius-sm: 0.5rem;    /* 8px */
+    --radius-md: 0.75rem;   /* 12px */
+    --radius-lg: 1rem;      /* 16px */
+    --radius-xl: 1.5rem;    /* 24px */
+    --radius-full: 9999px;
+
+    /* ========================================
+       SHADOWS - Drop Shadows for Depth
+       ======================================== */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.12);
+    --shadow-md: 0 8px 20px rgba(0, 0, 0, 0.18);
+    --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.22);
+    --shadow-xl: 0 24px 64px rgba(0, 0, 0, 0.28);
+
+    /* ========================================
+       MOTION - Transitions and Animations
+       ======================================== */
+    --duration-instant: 100ms;
+    --duration-fast: 200ms;
+    --duration-normal: 300ms;
+    --duration-slow: 500ms;
+    --duration-very-slow: 800ms;
+
+    --easing-out: ease-out;
+    --easing-in-out: ease-in-out;
+
+
+}

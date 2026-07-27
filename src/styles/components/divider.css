@@ -1,0 +1,29 @@
+.divider {
+  width: 100%;
+  border: 0;
+  border-top: 1px solid var(--color-border-subtle);
+}
+
+.divider-strong {
+  border-top-color: var(--color-border-strong);
+}
+
+.divider-dashed {
+  border-top-style: dashed;
+}
+
+.divider-vertical {
+  width: 1px;
+  height: auto;
+  border-top: 0;
+  border-left: 1px solid var(--color-border-subtle);
+  align-self: stretch;
+}
+
+.divider-vertical.divider-strong {
+  border-left-color: var(--color-border-strong);
+}
+
+.divider-vertical.divider-dashed {
+  border-left-style: dashed;
+}
