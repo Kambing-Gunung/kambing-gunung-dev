@@ -1,0 +1,28 @@
+.section {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.size-sm {
+  padding-block: var(--space-4);
+}
+
+.size-md {
+  padding-block: var(--space-8);
+}
+
+.size-lg {
+  padding-block: var(--space-12);
+}
+
+.variant-default {
+  background: transparent;
+}
+
+.variant-surface {
+  background: var(--color-surface-primary);
+}
+
+.variant-transparent {
+  background: transparent;
+}

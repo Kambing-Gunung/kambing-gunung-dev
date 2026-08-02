@@ -1,0 +1,10 @@
+.navbar {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
