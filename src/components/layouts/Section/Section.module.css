@@ -3,6 +3,10 @@
   box-sizing: border-box;
 }
 
+.size-none{
+  padding-block: 0;
+}
+
 .size-sm {
   padding-block: var(--space-4);
 }

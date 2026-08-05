@@ -1,0 +1,33 @@
+.featuredProjects {
+  width: 100%;
+}
+
+.kicker {
+  margin: 0;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-wide);
+  font-size: var(--fs-caption);
+  font-weight: var(--fw-semibold);
+}
+
+.title {
+  margin: 0;
+  color: var(--color-text-primary);
+  font-size: var(--fs-h2);
+}
+
+.projectCard {
+  height: 100%;
+}
+
+.projectTitle {
+  margin: 0;
+  color: var(--color-text-primary);
+  font-size: var(--fs-h4);
+}
+
+.projectDescription {
+  margin: 0;
+  color: var(--color-text-secondary);
+}

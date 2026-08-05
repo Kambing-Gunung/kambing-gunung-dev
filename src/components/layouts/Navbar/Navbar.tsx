@@ -1,41 +1,52 @@
-import { createElement } from "react";
+import { NavLink } from "react-router";
 
 import Container from "../Container";
 import Stack from "../Stack";
+
+import { common } from "@/content/common";
+
 import styles from "./Navbar.module.css";
-import type { NavbarProps } from "./Navbar.types";
 
-function Navbar(props: Readonly<NavbarProps>) {
-  const { sticky = false, className = "", children, ...restProps } = props;
+function Navbar() {
+    const { brand, navigation } = common;
 
-  const navbarClassName = [styles.navbar, sticky ? styles.sticky : "", className]
-    .filter(Boolean)
-    .join(" ");
+    return (
+        <header className={styles.navbar}>
+            <Container size="xl">
+                <Stack
+                    direction="horizontal"
+                    justify="between"
+                    align="center"
+                    className={styles.content}
+                >
+                    <NavLink
+                        to={brand.href}
+                        className={styles.logo}
+                    >
+                        <img
+                            src={brand.logo}
+                            alt={brand.name}
+                            className={styles.logoImage}
+                        />
 
-  return createElement(
-    "nav",
-    {
-      className: navbarClassName,
-      ...restProps,
-    },
-    createElement(
-      Container,
-      {
-        as: "div",
-        size: "xl",
-      },
-      createElement(
-        Stack,
-        {
-          direction: "horizontal",
-          justify: "between",
-          align: "center",
-          gap: "md",
-        },
-        children,
-      ),
-    ),
-  );
+                        <span>{brand.name}</span>
+                    </NavLink>
+
+                    <nav className={styles.navigation}>
+                        {navigation.primary.map((item) => (
+                            <NavLink
+                                key={item.to}
+                                to={item.to}
+                                className={styles.link}
+                            >
+                                {item.label}
+                            </NavLink>
+                        ))}
+                    </nav>
+                </Stack>
+            </Container>
+        </header>
+    );
 }
 
 export default Navbar;

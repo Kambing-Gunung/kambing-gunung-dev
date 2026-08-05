@@ -1,0 +1,144 @@
+.contentScene {
+    margin-top: var(--space-12);
+    margin-bottom: var(--space-12);
+    display: flex;
+    align-items: center;
+}
+
+.content {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 6fr 7fr;
+    align-items: center;
+}
+
+.information {
+    position: relative;
+    z-index: 3;
+
+    max-width: 34rem;
+}
+
+.kickerContainer {
+    margin-bottom: var(--space-4);
+    
+    font-family: var(--font-display);
+    font-size: var(--fs-heading-xl);
+    font-weight: var(--fw-black);
+
+    line-height: var(--lh-very-tight);
+    letter-spacing: var(--ls-wide);
+    text-transform: uppercase;
+    
+    white-space: nowrap;
+}
+
+.kicker1 {
+    color: var(--color-text-primary);
+}
+
+.kicker2 {
+    color: var(--color-highlight);
+}
+
+.divider {
+    width: 12rem;
+    margin-top: var(--space-6);
+
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.greeting {
+    margin-bottom: var(--space-2);
+
+    font-family: var(--font-accent);
+    font-size: var(--fs-heading-sm);
+    font-weight: var(--fw-medium);
+
+    color: var(--color-text-primary);
+}
+
+.title {
+    margin-bottom: var(--space-4);
+
+    font-family: var(--font-display);
+    font-size: var(--fs-heading-md);
+
+    font-weight: var(--fw-black);
+    line-height: var(--lh-tight);
+
+    color: var(--color-highlight);
+    white-space: nowrap;
+}
+
+.professionalTitle {
+    margin-bottom: var(--space-8);
+
+    font-family: var(--font-display);
+    font-size: var(--fs-heading-sm);
+    font-weight: var(--fw-semibold);
+    line-height: var(--lh-tight);
+    
+    color: var(--color-primary);
+}
+
+.description {
+    max-width: 28rem;
+    margin-bottom: var(--space-12);
+    font-family: var(--font-primary);
+    font-size: var(--fs-body-lg);
+
+    line-height: var(--lh-loose);
+    
+    color: var(--color-text-secondary);
+}
+
+.tag {
+    max-width: 28rem;
+    text-align: right;
+    font-family: var(--font-display);
+    font-size: var(--fs-overline);
+    font-weight: var(--fw-thin);
+    line-height: var(--lh-tight);
+
+    color: var(--color-primary);
+}
+
+.visual {
+    position: relative;
+    z-index: 1;
+
+    margin-left: -24%;
+}
+
+.visualImage {
+    width: 100%;
+    max-width: 760px;
+
+    display: block;
+}
+
+.visual::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    z-index: 2;
+
+    background:
+        linear-gradient(to right,
+            var(--color-background-primary) 0%,
+            transparent 40%,
+            transparent 90%,
+            var(--color-background-primary) 100%),
+        linear-gradient(to bottom,
+            var(--color-background-primary) 0%,
+            transparent 12%,
+            transparent 88%,
+            var(--color-background-primary) 100%);
+
+    pointer-events: none;
+}

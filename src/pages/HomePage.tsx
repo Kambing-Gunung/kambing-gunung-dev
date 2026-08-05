@@ -1,8 +1,22 @@
+import {
+    Hero,
+    About,
+    Skills,
+    FeaturedProjects,
+    Journey,
+    Contact,
+} from "@/components/sections/home";
+
 function HomePage() {
     return (
-        <section>
-            <h1>Home</h1>
-        </section>
+        <>
+            <Hero />
+            <About />
+            <Skills />
+            <FeaturedProjects />
+            <Journey />
+            <Contact />
+        </>
     );
 }
 

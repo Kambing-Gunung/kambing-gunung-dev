@@ -1,0 +1,7 @@
+.hero {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+
+    background: var(--color-background-primary);
+}

@@ -23,6 +23,10 @@
   gap: var(--space-6);
 }
 
+.gap-xl {
+  gap: var(--space-8);
+}
+
 .align-stretch {
   align-items: stretch;
 }

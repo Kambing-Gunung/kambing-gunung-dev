@@ -1,7 +1,7 @@
 import type { ElementType, HTMLAttributes, ReactNode } from "react";
 
 export type StackDirection = "vertical" | "horizontal";
-export type StackGap = "sm" | "md" | "lg";
+export type StackGap = "sm" | "md" | "lg" | "xl";
 export type AlignItems = "stretch" | "start" | "center" | "end";
 export type JustifyContent = "start" | "center" | "end" | "between";
 
