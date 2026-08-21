@@ -1,67 +1,195 @@
 .about {
+  position: relative;
+  isolation: isolate;
+
+  margin-top: var(--space-6);
+  margin-bottom: 0;
+
+  display: flex;
+  align-items: center;
+}
+
+.about::after {
+  content: "";
+
+  position: absolute;
+  z-index: -1;
+
+  left: 0;
+  right: 0;
+  bottom: -50px;
+
+  height: 400px;
+
+  background: linear-gradient(
+  to bottom,
+  transparent 0%,
+  rgba(0, 0, 0, 0.08) 20%,
+  rgba(0, 0, 0, 0.25) 40%,
+  rgba(0, 0, 0, 0.55) 65%,
+  rgba(0, 0, 0, 0.85) 85%,
+  #000 100%
+);
+
+  pointer-events: none;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+
+  display: grid;
+  grid-template-columns: 6fr 7fr;
+  align-items: center;
+}
+
+.visual {
+  position: relative;
+  z-index: 2;
+
+  margin-right: -24%;
+}
+
+.visualImage {
   width: 100%;
+  max-width: 760px;
+
+  display: block;
 }
 
-.kicker {
-  margin: 0;
-  color: var(--color-primary);
-  text-transform: uppercase;
+.visual::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  z-index: 3;
+
+  background:
+    linear-gradient(to left,
+      var(--color-background-primary) 0%,
+      transparent 40%,
+      transparent 90%,
+      var(--color-background-primary) 100%),
+    linear-gradient(to bottom,
+      var(--color-background-primary) 0%,
+      transparent 12%,
+      transparent 88%,
+      var(--color-background-primary) 100%);
+
+  pointer-events: none;
+}
+
+.ctaActions {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-6);
+}
+
+
+.information {
+  position: relative;
+  z-index: 4;
+
+  max-width: 38rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  text-align: right;
+
+}
+
+.kickerContainer {
+  margin-bottom: var(--space-4);
+
+  font-family: var(--font-display);
+  font-size: var(--fs-heading-xl);
+  font-weight: var(--fw-black);
+
+  line-height: var(--lh-very-tight);
   letter-spacing: var(--ls-wide);
-  font-size: var(--fs-caption);
-  font-weight: var(--fw-semibold);
+  text-transform: uppercase;
+
+  white-space: nowrap;
 }
 
-.title {
-  margin: 0;
+.kicker1 {
+  color: var(--color-primary);
+}
+
+.kicker2 {
   color: var(--color-text-primary);
-  font-size: var(--fs-h2);
+}
+
+.divider1 {
+  width: 12rem;
+  margin-top: var(--space-6);
+
+  margin-right: 0;
+}
+
+.greeting {
+  margin-bottom: var(--space-2);
+
+  font-family: var(--font-display);
+  font-size: var(--fs-heading-md);
+  font-weight: var(--fw-black);
   line-height: var(--lh-tight);
+
+  color: var(--color-highlight);
+  white-space: nowrap;
 }
 
 .description {
-  margin: 0;
+  width: 100%;
+  margin-bottom: var(--space-4);
+
+  font-family: var(--font-primary);
+  font-size: var(--fs-body-lg);
+
+  line-height: var(--lh-loose);
+
   color: var(--color-text-secondary);
 }
 
-.illustrationCard {
-  min-height: 24rem;
+.description:last-of-type {
+  margin-bottom: var(--space-12);
+  line-height: var(--lh-relaxed);
 }
 
-.illustration {
-  display: grid;
-  place-items: center;
-  min-height: 100%;
-  border-radius: var(--radius-lg);
-  background:
-    radial-gradient(circle at top left, color-mix(in srgb, var(--color-primary) 35%, transparent), transparent 56%),
-    linear-gradient(135deg, var(--color-surface-secondary), var(--color-surface-primary));
+.footer {
+  margin-top: var(--space-6);
+  margin-bottom: var(--space-2);
+  font-family: var(--font-display);
+  font-weight: var(--fw-black);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  text-align: center;
+
+  white-space: nowrap;
 }
 
-.illustrationMark {
-  width: 12rem;
-  height: 12rem;
-  border-radius: 9999px;
-  border: 1px solid color-mix(in srgb, var(--color-primary) 60%, transparent);
-  background: color-mix(in srgb, var(--color-primary) 18%, transparent);
-  box-shadow: var(--shadow-md);
+.divider2 {
+  width: 75%;
+  margin-bottom: var(--space-6);
 }
 
-.summaryGrid {
-  margin-top: var(--space-8);
+.philosophy {
+  margin-bottom: 0;
+  font-size: var(--fs-body-lg);
+
+  color: var(--color-primary);
 }
 
-.summaryCard {
-  min-height: 10rem;
-}
+.ctaTitle {
+  margin-top: 0;
 
-.summaryTitle {
-  margin: 0 0 var(--space-2);
-  color: var(--color-text-primary);
-  font-size: var(--fs-h4);
-  font-weight: var(--fw-semibold);
-}
+  font-size: var(--fs-heading-lg);
 
-.summaryDescription {
-  margin: 0;
-  color: var(--color-text-secondary);
+  color: var(--color-highlight);
 }

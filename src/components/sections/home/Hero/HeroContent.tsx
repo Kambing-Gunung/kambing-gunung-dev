@@ -32,7 +32,7 @@ function HeroContent() {
                     </div>
 
                     <div className={styles.visual}>
-                        <img src={developerPlaceholder} alt="Developer Illustration" className={styles.visualImage} />
+                        <img src={developerPlaceholder} alt="HeroContent Illustration" className={styles.visualImage} />
                     </div>
                 </div>
 

@@ -1,0 +1,21 @@
+.noise {
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  opacity: 0.08;
+
+  background-image:
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent 2px,
+      currentColor 2px,
+      currentColor 3px
+    );
+
+  background-color: var(--color-background-terminal);
+
+  z-index: 4;
+}

@@ -1,0 +1,20 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 8% 6px;
+  padding-top: 2%;
+
+  font-family: var(--font-terminal);
+  font-size: var(--fs-heading-lg);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-none);
+  letter-spacing: var(--ls-tight);
+
+  color: var(--color-terminal-primary);
+
+  text-shadow: 0 0 4px rgba(210, 144, 33, 0.35);
+
+  border-bottom: 1px solid var(--color-terminal-border);
+}

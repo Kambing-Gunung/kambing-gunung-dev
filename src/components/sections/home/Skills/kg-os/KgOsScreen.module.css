@@ -1,0 +1,38 @@
+.screen {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  text-shadow: 0 0 4px rgba(210, 144, 33, 0.35);
+}
+
+.screen::-webkit-scrollbar {
+  display: none;
+}
+
+.content {
+  flex: 1;
+  min-height: 0;
+
+  overflow-y: auto;
+
+  padding: 2% 4%;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.content::-webkit-scrollbar {
+  display: none;
+}
+
+.divider-dashed {
+  border-top-color: var(--color-terminal-border);
+}

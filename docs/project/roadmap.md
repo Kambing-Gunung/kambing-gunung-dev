@@ -76,7 +76,7 @@ Sprint 5.3
 
 Current Focus
 
-Home Implementation
+Featured Projects Implementation
 
 ---
 
@@ -311,6 +311,10 @@ Skills
 Review
     ↓
 Commit
+
+↓
+
+**Skills — Complete / Frozen**
 
 ↓
 

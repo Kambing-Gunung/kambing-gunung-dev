@@ -10,6 +10,7 @@
 
 .divider-dashed {
   border-top-style: dashed;
+  border-top-color: var(--color-terminal-border);
 }
 
 .divider-vertical {

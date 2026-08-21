@@ -24,9 +24,9 @@ function HeroIntro() {
                             <p className={styles.scrollText}>Explore</p>
 
                             <div className={styles.scrollArrow}>
-                                <span>v</span>
-                                <span>v</span>
-                                <span>v</span>
+                                <span>﹀</span>
+                                <span>﹀</span>
+                                <span>﹀</span>
                             </div>
                         </div>
                     </div>

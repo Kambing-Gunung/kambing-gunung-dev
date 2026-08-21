@@ -1,0 +1,45 @@
+.monitor {
+  position: absolute;
+
+  width: 80%;
+
+  top: 0%;
+  left: 0%;
+
+  z-index: 4;
+  
+  filter:
+    drop-shadow(0 18px 14px rgba(0, 0, 0, 0.45));
+}
+
+.asset {
+  position: relative;
+  z-index: 2;
+
+  pointer-events: none;
+
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  object-fit: contain;
+
+  filter:
+    drop-shadow(0 18px 14px rgba(0, 0, 0, 0.45));
+}
+
+.screen {
+  position: absolute;
+  z-index: 1;
+
+  left: 20%;
+  top: 14%;
+
+  width: 60%;
+  height: 59%;
+
+  overflow: hidden;
+
+  background-color: var(--color-background-terminal);
+}

@@ -1,0 +1,15 @@
+.computer {
+  position: relative;
+
+  width: 100%;
+  height: 1000px;
+
+  transform: translateY(25%);
+
+  z-index: 1;
+}
+
+.top,
+.bottom {
+  display: contents;
+}

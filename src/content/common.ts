@@ -39,5 +39,107 @@ export const common = {
         to: "/contact",
       },
     ],
-  }
+  },
+
+  techInventory: {
+      languages: [
+        "C++",
+        "C#",
+        "Java",
+        "JavaScript",
+        "TypeScript",
+        "Dart",
+        "PHP",
+        "GML",
+        "SQL",
+      ],
+
+      frameworksAndPlatforms: [
+        ".NET",
+        "ASP.NET Core",
+        "Flutter",
+        "React",
+        "Next.js",
+        "Node.js",
+        "Express.js",
+        "Laravel",
+        "Avalonia UI",
+        "JavaFX",
+        "Java Swing",
+        "Unity",
+        "GameMaker Studio",
+        "Bulma CSS",
+        "Tailwind CSS",
+        "Bootstrap",
+      ],
+
+      librariesAndPackages: [
+        "Entity Framework Core",
+        "React Router",
+        "Flutter Map",
+        "latlong2",
+        "AutoMapper",
+        "Sequelize",
+      ],
+
+      databasesAndQuery: [
+        "MySQL",
+        "SQLite",
+      ],
+
+      apiAndIntegration: [
+        "REST API",
+        "Swagger / OpenAPI",
+        "JWT",
+      ],
+
+      engineering: [
+        "OOP",
+        "Clean Architecture",
+        "MVVM",
+        "Repository Pattern",
+        "Dependency Injection",
+      ],
+
+      gameAndCreative: [
+        "Aseprite",
+      ],
+
+      design: [
+        "Figma",
+        "Canva",
+      ],
+
+      testing: [
+        "Katalon Studio",
+        "Apache JMeter",
+        "PHPUnit",
+        "Cypress",
+      ],
+
+      developmentTools: [
+        "Git",
+        "GitHub",
+        "Visual Studio Code",
+        "NetBeans",
+        "Code::Blocks",
+        "XAMPP",
+        "Android SDK",
+        "Vite",
+        "ESLint",
+        "Maven",
+        "Tomcat",
+        "SonarQube",
+        "JDK",
+      ],
+
+      markupAndData: [
+        "HTML",
+        "CSS",
+        "Markdown",
+        "XML",
+        "JSON",
+        "XAML",
+      ],
+    },
 };
