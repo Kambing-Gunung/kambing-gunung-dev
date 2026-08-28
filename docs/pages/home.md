@@ -1226,11 +1226,14 @@ Achievement.
 
 Featured Projects merupakan section keempat pada Home Page.
 
-Section ini menampilkan karya terbaik yang paling merepresentasikan kemampuan, pengalaman, dan kualitas engineering developer.
+Section ini menampilkan karya terbaik yang paling merepresentasikan
+kemampuan, pengalaman, dan kualitas engineering developer.
 
-Featured Projects tidak bertujuan menampilkan seluruh project yang pernah dibuat.
+Featured Projects tidak bertujuan menampilkan seluruh project yang
+pernah dibuat.
 
-Sebaliknya, section ini berfungsi sebagai showcase yang memberikan bukti nyata terhadap kompetensi yang telah diperkenalkan pada section Skills.
+Sebaliknya, section ini berfungsi sebagai showcase yang memberikan bukti
+nyata terhadap kompetensi yang telah diperkenalkan pada section Skills.
 
 ---
 
@@ -1238,10 +1241,10 @@ Sebaliknya, section ini berfungsi sebagai showcase yang memberikan bukti nyata t
 
 Featured Projects memiliki tujuan sebagai berikut.
 
-- Membuktikan kemampuan developer melalui karya nyata.
-- Menampilkan project yang paling representatif.
-- Menarik perhatian recruiter maupun client.
-- Mengarahkan pengunjung menuju halaman Projects.
+-   Membuktikan kemampuan developer melalui karya nyata.
+-   Menampilkan project yang paling representatif.
+-   Menarik perhatian recruiter maupun client.
+-   Mengarahkan pengunjung menuju halaman Projects.
 
 ---
 
@@ -1249,9 +1252,9 @@ Featured Projects memiliki tujuan sebagai berikut.
 
 Setelah melihat Featured Projects, pengunjung diharapkan:
 
-- Mempercayai kemampuan developer.
-- Memahami kualitas engineering yang dimiliki.
-- Tertarik melihat project lainnya.
+-   Mempercayai kemampuan developer.
+-   Memahami kualitas engineering yang dimiliki.
+-   Tertarik melihat project lainnya.
 
 ---
 
@@ -1259,15 +1262,16 @@ Setelah melihat Featured Projects, pengunjung diharapkan:
 
 Featured Projects menjawab satu pertanyaan utama.
 
-"Karya apa yang paling mewakili kemampuan tersebut?"
+> "Karya apa yang paling mewakili kemampuan tersebut?"
 
 Featured Projects tidak menjawab:
 
-"Seluruh project apa saja yang pernah dibuat?"
+> "Seluruh project apa saja yang pernah dibuat?"
 
 Pertanyaan tersebut dijawab pada halaman Projects.
 
-Featured Projects hanya memilih project terbaik yang paling mampu mewakili kualitas developer.
+Featured Projects hanya memilih project terbaik yang paling mampu
+mewakili kualitas developer.
 
 ---
 
@@ -1275,7 +1279,8 @@ Featured Projects hanya memilih project terbaik yang paling mampu mewakili kuali
 
 ## Quality First
 
-Menampilkan sedikit project berkualitas lebih baik daripada menampilkan seluruh project.
+Menampilkan sedikit project berkualitas lebih baik daripada menampilkan
+seluruh project.
 
 ---
 
@@ -1299,70 +1304,267 @@ Seluruh project menggunakan struktur penyajian yang konsisten.
 
 ---
 
+## Visual Metaphor
+
+Featured Projects menggunakan pendekatan visual adventure RPG sebagai
+metafora untuk memperkenalkan karya developer.
+
+Project direpresentasikan sebagai paper/poster yang ditempel pada sebuah
+quest board.
+
+Visual RPG digunakan sebagai bahasa visual dan interaction metaphor,
+bukan sebagai tema utama website.
+
+---
+
 # Content
 
 Featured Projects terdiri atas:
 
-- Section Heading
-- Project Cards
-- View All Projects CTA
+-   Section Heading
+-   Quest Board
+-   Project Papers
+-   Project Description Panel
+-   View All Projects CTA
 
 ---
 
-# Project Card
+# Project Representation
 
-Setiap Project Card terdiri atas:
+Project ditampilkan sebagai paper/poster yang ditempel pada quest board.
 
-- Thumbnail
-- Project Name
-- Short Description
-- Technology Tags
-- Project Status (optional)
-- View Detail CTA
+Setiap project paper berfungsi sebagai representasi visual dari project
+dan dapat berinteraksi dengan pengguna.
 
----
+Jumlah Featured Projects:
 
-# Responsibilities
+-   Minimum: 3 project
+-   Recommended: 3--5 project
+-   Maximum: 5 project
 
-Featured Projects bertanggung jawab untuk:
-
-- Menampilkan project terbaik.
-- Membuktikan kemampuan developer.
-- Menjadi transisi menuju halaman Projects.
-
-Featured Projects tidak bertanggung jawab untuk:
-
-- Menampilkan seluruh project.
-- Menampilkan dokumentasi project.
-- Menampilkan source code.
-- Menampilkan changelog.
+Featured Projects hanya menampilkan project yang paling representatif
+terhadap kemampuan developer.
 
 ---
 
-# Success Criteria
+# Project Information
 
-Featured Projects dianggap berhasil apabila:
+Informasi utama project yang dapat ditampilkan melalui paper atau
+interaction panel:
 
-- Pengunjung memahami kualitas project developer.
-- Pengunjung tertarik membuka halaman Projects.
-- Pengunjung memperoleh gambaran mengenai jenis software yang dibangun developer.
+-   Project Name
+-   Short Description
+-   Technology Tags
+-   Project Status (optional)
+-   Featured Project indicator
+
+Detail lengkap tidak ditampilkan langsung pada board.
+
+Detail project ditampilkan ketika pengguna melakukan interaction pada
+project.
+
+---
+
+# Hover Behavior
+
+Ketika pengguna melakukan hover pada sebuah project paper:
+
+-   Project paper mendapatkan subtle glow.
+-   Project paper dapat mengalami sedikit scale/lift.
+-   Description Panel muncul di samping board.
+-   Description Panel menampilkan informasi singkat mengenai project.
+-   Project lainnya tetap berada pada posisi normal.
+
+Hover interaction harus tetap subtle agar tidak mengganggu komposisi
+utama board.
+
+---
+
+# Click Behavior
+
+Ketika pengguna melakukan click pada project:
+
+-   Project Detail Panel muncul di atas board.
+-   Detail project menjadi fokus utama.
+-   Informasi project dapat ditampilkan lebih lengkap.
+-   Board tetap menjadi konteks visual di belakang detail.
+
+Detail panel tidak dimaksudkan untuk menggantikan halaman Projects.
+
+Pengguna tetap dapat membuka halaman Projects untuk memperoleh informasi
+lengkap mengenai seluruh project.
+
+---
+
+# View All Projects
+
+View All Projects berfungsi sebagai CTA menuju halaman Projects.
+
+CTA direpresentasikan sebagai sign board terpisah yang berada di sekitar
+quest board.
+
+Label:
+
+> View All Projects →
+
+CTA mengarahkan pengguna menuju halaman Projects.
+
+---
+
+# Visual Structure
+
+Featured Projects menggunakan dua layer utama untuk membangun depth dan
+parallax.
+
+``` text
+Featured Projects
+│
+├── Layer 1 — Background
+│   ├── Sky
+│   └── Distant City
+│
+└── Layer 2 — Foreground
+    ├── Board
+    ├── Project Papers
+    ├── Description Panel
+    ├── View All Projects Sign
+    ├── Wall
+    └── Ground / Road
+```
+
+---
+
+# Parallax
+
+Featured Projects menggunakan parallax sederhana yang hanya terdiri dari
+dua layer.
+
+## Layer 1 --- Background
+
+Berisi:
+
+-   Sky
+-   Stars
+-   Distant City
+
+Layer ini bergerak lebih jauh ketika pengguna menggerakkan cursor.
+
+Tujuannya memberikan kesan depth pada environment.
+
+---
+
+## Layer 2 --- Foreground
+
+Berisi:
+
+-   Quest Board
+-   Project Papers
+-   Description Panel
+-   View All Projects Sign
+-   Wall
+-   Ground / Road
+
+Layer ini bergerak sangat sedikit dibandingkan background.
+
+Tujuannya menjaga board sebagai anchor utama section.
+
+---
+
+## Parallax Principle
+
+Parallax harus bersifat subtle.
+
+Konsep pergerakan:
+
+``` text
+Cursor Movement
+       ↓
+
+Sky + City
+    ←────────→
+      ± lebih jauh
+
+Board + Environment
+       ←→
+     ± sedikit
+```
+
+Contoh nilai awal untuk implementation:
+
+``` text
+Background : ±12px
+Foreground : ±3px
+```
+
+Nilai tersebut bukan nilai final dan dapat disesuaikan ketika
+implementation dan responsive testing dilakukan.
+
+Parallax tidak boleh membuat board terasa bergeser secara berlebihan.
+
+---
+
+# Layer Relationship
+
+Sky + City berfungsi sebagai deep background.
+
+Board dan seluruh environment foreground diperlakukan sebagai satu
+kesatuan visual.
+
+Project Papers, Description Panel, dan View All Projects Sign mengikuti
+foreground layer.
+
+Tidak ada parallax tambahan pada masing-masing object tersebut.
+
+Tujuannya menjaga visual tetap konsisten dan menghindari efek gimmick
+yang berlebihan.
 
 ---
 
 # Layout
 
-```
+``` text
 Desktop
 
-Heading
+              Section Heading
 
-↓
+        ┌─────────────────────────┐
+        │                         │
+        │       QUEST BOARD       │
+        │                         │
+        │   [Project] [Project]   │
+        │   [Project] [Project]   │
+        │                         │
+        └─────────────────────────┘
 
-Project Grid
+              [ View All Projects → ]
+```
 
-↓
+Ketika project di-hover:
 
-View All Projects Button
+``` text
+        ┌─────────────────────────┐
+        │       QUEST BOARD       │
+        │                         │
+        │       [Project] ────────┼── Description
+        │       [Project]         │     Panel
+        │       [Project]         │
+        └─────────────────────────┘
+```
+
+Ketika project di-click:
+
+``` text
+        ┌─────────────────────────┐
+        │                         │
+        │     PROJECT DETAIL      │
+        │                         │
+        │     Information         │
+        │     Technology          │
+        │     Status              │
+        │                         │
+        └─────────────────────────┘
+                    │
+                 BOARD
 ```
 
 ---
@@ -1371,51 +1573,176 @@ View All Projects Button
 
 Featured Projects menggunakan Layout Components yang telah tersedia.
 
-Container digunakan sebagai pembatas lebar konten.
+-   Container digunakan sebagai pembatas lebar konten.
+-   Section digunakan sebagai pembatas vertikal.
+-   Grid digunakan untuk menyusun Project Papers.
+-   Card dapat digunakan sebagai basis struktur project interaction jika
+    sesuai dengan visual system.
+-   Technology Tags menggunakan komponen Chip.
+-   Button menggunakan komponen Button.
+-   Seluruh spacing mengikuti Design Tokens.
+-   Typography mengikuti Typography System.
 
-Section digunakan sebagai pembatas vertikal.
+Asset visual digunakan sebagai bagian dari composition layer, bukan
+sebagai pengganti struktur HTML yang diperlukan untuk interaction dan
+accessibility.
 
-Grid digunakan untuk menyusun Project Cards.
+---
 
-Card menggunakan komponen Card yang telah tersedia.
+# Asset Structure
 
-Technology Tags menggunakan komponen Chip.
+Asset utama Featured Projects terdiri dari:
 
-Button menggunakan komponen Button.
+-   Sky + City background.
+-   Quest Board environment.
+-   Project Paper.
+-   View All Projects sign.
+-   Project Description Panel.
 
-Seluruh spacing mengikuti Design Tokens.
+Asset background dan foreground dipisahkan agar dapat digunakan sebagai
+dua layer parallax.
 
-Typography mengikuti Typography System.
+---
+
+# Responsive Behavior
+
+Pada desktop, parallax dan interaction dapat digunakan secara penuh.
+
+Pada perangkat dengan pointer terbatas atau touch device:
+
+-   Hover interaction tidak menjadi requirement utama.
+-   Project tetap dapat diakses melalui click/tap.
+-   Parallax dapat dikurangi atau dinonaktifkan.
+-   Layout harus tetap dapat digunakan tanpa bergantung pada motion.
+
+Komposisi board harus tetap menjadi fokus utama pada berbagai ukuran
+layar.
+
+---
+
+# Accessibility
+
+Interaction tidak boleh hanya bergantung pada hover.
+
+Project harus tetap dapat diakses menggunakan:
+
+-   Keyboard focus.
+-   Click.
+-   Tap.
+
+Informasi penting tidak boleh hanya tersedia melalui visual glow atau
+parallax.
+
+Motion harus bersifat dekoratif dan tidak menjadi bagian wajib dari
+pemahaman content.
+
+Jika `prefers-reduced-motion` aktif, parallax dan motion interaction
+harus dikurangi atau dinonaktifkan.
+
+---
+
+# Responsibilities
+
+Featured Projects bertanggung jawab untuk:
+
+-   Menampilkan project terbaik.
+-   Membuktikan kemampuan developer.
+-   Memberikan konteks singkat mengenai project.
+-   Memberikan interaction yang menarik namun tetap terkontrol.
+-   Menjadi transisi menuju halaman Projects.
+
+Featured Projects tidak bertanggung jawab untuk:
+
+-   Menampilkan seluruh project.
+-   Menampilkan dokumentasi project.
+-   Menampilkan source code.
+-   Menampilkan changelog.
+-   Menjadi repository browser.
+-   Menjadi complete project gallery.
+
+---
+
+# Success Criteria
+
+Featured Projects dianggap berhasil apabila:
+
+-   Pengunjung memahami kualitas project developer.
+-   Pengunjung tertarik membuka halaman Projects.
+-   Pengunjung memperoleh gambaran mengenai jenis software yang dibangun
+    developer.
+-   Visual interaction memperkuat showcase tanpa mengganggu content.
+-   Board tetap menjadi visual anchor utama.
+-   Parallax memberikan depth tanpa terasa berlebihan.
+-   Project dapat diakses tanpa bergantung pada hover atau motion.
 
 ---
 
 # Future Improvements
 
-Project filtering.
+Future improvements dapat mencakup:
 
-Featured badges.
+-   Project filtering.
+-   Featured badges.
+-   Interactive preview.
+-   Video preview.
+-   Live demo indicator.
+-   Project search.
+-   More advanced project interaction.
 
-Interactive preview.
-
-Video preview.
-
-Live demo indicator.
-
-Project search.
+Future improvements tidak menjadi bagian dari initial implementation.
 
 ---
 
 # Out of Scope
 
-Project documentation.
+-   Project documentation.
+-   Repository browser.
+-   Issue tracker.
+-   Release history.
+-   Complete project gallery.
+-   Advanced multi-layer parallax.
+-   Complex 3D interaction.
+-   Full-screen project management interface.
 
-Repository browser.
+---
 
-Issue tracker.
+# Initial Implementation Scope
 
-Release history.
+Initial implementation Featured Projects berfokus pada:
 
-Complete project gallery.
+1.  Section structure.
+2.  Background sky + city.
+3.  Foreground board + environment.
+4.  Two-layer parallax.
+5.  Project papers.
+6.  Hover glow.
+7.  Description Panel.
+8.  Click-to-detail interaction.
+9.  View All Projects CTA.
+10. Responsive behavior.
+11. Reduced-motion support.
+
+Visual polish dilakukan setelah behavior utama selesai dan stabil.
+
+---
+
+# Freeze Criteria
+
+Featured Projects dapat di-freeze apabila:
+
+-   Visual composition telah disetujui.
+-   Asset utama telah ditentukan.
+-   Struktur dua layer parallax telah ditetapkan.
+-   Project representation telah ditetapkan.
+-   Hover behavior telah ditetapkan.
+-   Click behavior telah ditetapkan.
+-   View All Projects CTA telah ditetapkan.
+-   Responsive behavior telah ditetapkan.
+-   Accessibility requirements telah ditetapkan.
+
+Setelah freeze, perubahan visual besar harus diperlakukan sebagai
+perubahan desain baru dan tidak dilakukan selama implementation tanpa
+review terlebih dahulu.
 
 ---
 

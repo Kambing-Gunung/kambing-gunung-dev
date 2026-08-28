@@ -170,13 +170,81 @@ Belum terdapat ide.
 
 ## Featured Projects
 
+### Featured Projects
+
 ### Planned
 
 Belum terdapat ide.
 
 ### Exploration
 
-Belum terdapat ide.
+#### Interactive Project Board
+
+Featured Projects ditampilkan sebagai sebuah whiteboard / board /
+tembok kosong yang berisi project-project unggulan.
+
+Project direpresentasikan sebagai artifact yang ditempel pada board.
+
+Possible Elements
+
+- Project Screenshot
+- Project Title
+- Short Description
+- Technology / Category
+- Project Status
+- Featured Marker
+
+Interaction
+
+- Hover untuk melihat informasi singkat.
+- Click untuk membuka project detail.
+
+Concept
+
+Board bukan project management interface.
+
+Board merepresentasikan ruang kerja developer yang berisi
+beberapa karya yang sedang atau pernah dibangun.
+
+Notes
+
+- Konsep masih tahap eksplorasi.
+- Tidak menggunakan seluruh project; hanya selected / featured works.
+- Visual harus mempertahankan negative space.
+- Hindari tampilan seperti Trello / Notion / dashboard.
+
+#### Bookshelf / Project Collection
+
+Project direpresentasikan sebagai buku pada sebuah rak.
+Jumlah buku merepresentasikan jumlah project.
+
+Hover menampilkan nama project dan deskripsi singkat.
+Click membuka project detail.
+
+Status
+
+Ditunda sementara.
+
+Potential Future Use
+
+- Projects Page
+- Project Archive
+
+---
+
+#### Project Notebook
+
+Project direpresentasikan sebagai halaman dalam sebuah notebook.
+User dapat berpindah halaman untuk melihat project berikutnya.
+
+Status
+
+Ditunda sementara.
+
+Potential Future Use
+
+- Journey
+- Project Page
 
 ---
 

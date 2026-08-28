@@ -1,65 +1,94 @@
-import Button from "@/components/ui/Button";
-import Card from "@/components/ui/Card";
-import Chip from "@/components/ui/Chip";
+import { useState } from "react";
+
 import Container from "@/components/layouts/Container";
-import Grid from "@/components/layouts/Grid";
 import Section from "@/components/layouts/Section";
-import Stack from "@/components/layouts/Stack";
+
+import skyCity from "@/assets/images/featured-projects/featured-projects-sky.png";
+import board from "@/assets/images/featured-projects/featured-projects-board.png";
+
+import Divider from "@/components/ui/Divider";
+
+import ProjectPaper from "./ProjectPaper/ProjectPaper";
+import ProjectDetail from "./ProjectDetail/ProjectDetail";
+
+import { home } from "@/content/home";
 
 import styles from "./FeaturedProjects.module.css";
 
-const featuredProjects = [
-  {
-    title: "Kambing Gunung Platform",
-    description: "A strong personal platform focused on engineering clarity, content structure, and brand cohesion.",
-    tags: ["React", "TypeScript", "Vite"],
-  },
-  {
-    title: "Game Development Practice",
-    description: "A hands-on portfolio of game ideas and interactive prototypes built with a product-first mindset.",
-    tags: ["Unity", "Godot", "C#"],
-  },
-  {
-    title: "Platform Systems",
-    description: "Backend and product foundations designed to support stable processing, maintainability, and growth.",
-    tags: ["ASP.NET Core", "SQLite", "EF Core"],
-  },
-];
-
 function FeaturedProjects() {
+  const { featuredProjects } = home;
+
+  const [selectedProjectId, setSelectedProjectId] =
+    useState<string | null>(null);
+
+  const selectedProject =
+    featuredProjects.projects.find(
+      (project) => project.id === selectedProjectId
+    );
+
+  const handleProjectClick = (projectId: string) => {
+    setSelectedProjectId(projectId);
+  };
+
   return (
-    <Section as="section" size="lg" className={styles.featuredProjects}>
+    <Section
+      as="section"
+      size="lg"
+      className={styles.featuredProjects}
+    >
       <Container as="div" size="xl">
-        <Stack direction="vertical" gap="lg">
-          <Stack direction="vertical" gap="sm">
-            <p className={styles.kicker}>Featured Projects</p>
-            <h2 className={styles.title}>Work that demonstrates craft and intent.</h2>
-          </Stack>
+        <div className={styles.scene}>
 
-          <Grid columns={3} gap="md">
-            {featuredProjects.map((project) => (
-              <Card key={project.title} variant="interactive" padding="lg" className={styles.projectCard}>
-                <Stack direction="vertical" gap="md">
-                  <Stack direction="vertical" gap="sm">
-                    <h3 className={styles.projectTitle}>{project.title}</h3>
-                    <p className={styles.projectDescription}>{project.description}</p>
-                  </Stack>
-                  <Stack direction="horizontal" gap="sm" wrap>
-                    {project.tags.map((tag) => (
-                      <Chip key={tag} variant="outline" size="sm">
-                        {tag}
-                      </Chip>
-                    ))}
-                  </Stack>
-                </Stack>
-              </Card>
-            ))}
-          </Grid>
+          {/* SKY */}
+          <div className={styles.skyLayer}>
+            <img src={skyCity} alt="" />
+          </div>
 
-          <Button variant="secondary" size="md">
-            View All Projects
-          </Button>
-        </Stack>
+          {/* HEADER */}
+          <div className={styles.projectHeader}>
+            <span className={styles.projectEyebrow}>
+              {featuredProjects.kicker}
+            </span>
+
+            <h2 className={styles.projectTitle}>
+              {featuredProjects.title}
+            </h2>
+
+            <Divider variant="strong" />
+
+            <p className={styles.projectDescription}>
+              {featuredProjects.description}
+            </p>
+          </div>
+
+          {/* BOARD */}
+          <div className={styles.boardLayer}>
+            <img src={board} alt="" />
+
+            <div className={styles.projectArea}>
+              <div className={styles.projectList}>
+                {featuredProjects.projects.map((project) => (
+                  <ProjectPaper
+                    key={project.id}
+                    project={project}
+                    onClick={() =>
+                      handleProjectClick(project.id)
+                    }
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* FULL PROJECT DETAIL */}
+          {selectedProject && (
+            <ProjectDetail
+              project={selectedProject}
+              onClose={() => setSelectedProjectId(null)}
+            />
+          )}
+
+        </div>
       </Container>
     </Section>
   );

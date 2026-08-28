@@ -1,3 +1,9 @@
+import huruf1 from "@/assets/images/featured-projects/huruf-1.png";
+import huruf2 from "@/assets/images/featured-projects/huruf-2.png";
+import huruf3 from "@/assets/images/featured-projects/huruf-3.png";
+import huruf4 from "@/assets/images/featured-projects/huruf-4.png";
+import huruf5 from "@/assets/images/featured-projects/huruf-5.png";
+
 export const home = {
   hero: {
     intro: {
@@ -302,5 +308,163 @@ export const home = {
         ],
       },
     ],
-  }
+  },
+
+  featuredProjects: {
+    kicker: "Here is My Work",
+
+    title: "Check this out",
+
+    description:
+      "A selection of projects that represent my approach to software engineering, problem solving, and creative development.",
+
+    projects: [
+      {
+        id: "siladhida",
+        name: "SiLadhida",
+        category: "Desktop POS System",
+        description:
+          "A desktop point-of-sale application designed for small businesses, focusing on structured workflows, maintainable architecture, and practical business operations.",
+
+        technologies: [
+          "C#",
+          ".NET",
+          "Avalonia UI",
+          "MySQL",
+        ],
+
+        status: "In Development",
+
+        featured: true,
+
+        href: "/projects/siladhida",
+
+        gallery: [
+          huruf5,
+          huruf1,
+          huruf2,
+          huruf3,
+          huruf4,
+        ],
+      },
+
+      {
+        id: "taskmap",
+        name: "TaskMap",
+        category: "Mobile Application",
+        description:
+          "A location-based task management application that combines task organization, calendar planning, and map-based interaction.",
+
+        technologies: [
+          "Flutter",
+          "Dart",
+          "SQLite",
+          "OpenStreetMap",
+        ],
+
+        status: "In Development",
+
+        featured: true,
+
+        href: "/projects/taskmap",
+
+        gallery: [
+          huruf4,
+          huruf5,
+          huruf1,
+          huruf2,
+          huruf3,
+        ],
+      },
+
+      {
+        id: "huruf",
+        name: "Huruf",
+        category: "Game",
+        description:
+          "A game project exploring interactive systems, gameplay mechanics, visual identity, and creative world building.",
+
+        technologies: [
+          "GameMaker Studio",
+          "GML",
+          "Aseprite",
+        ],
+
+        status: "In Development",
+
+        featured: true,
+
+        href: "/projects/huruf",
+
+        gallery: [
+          huruf1,
+          huruf2,
+          huruf3,
+          huruf4,
+          huruf5,
+        ],
+      },
+
+      {
+        id: "kambing-gunung-platform",
+        name: "Kambing Gunung Platform",
+        category: "Web Platform",
+        description:
+          "A personal developer platform built to bring together software engineering, creative design, projects, and the developer journey.",
+
+        technologies: [
+          "React",
+          "TypeScript",
+          "Vite",
+        ],
+
+        status: "In Development",
+
+        featured: true,
+
+        href: "/projects/kambing-gunung-platform",
+
+        gallery: [
+          huruf2,
+          huruf3,
+          huruf4,
+          huruf5,
+          huruf1,
+        ],
+      },
+
+      {
+        id: "kambing-gunung",
+        name: "Kambing Gunung",
+        category: "Web Platform",
+        description:
+          "A personal developer platform built to bring together software engineering, creative design, projects, and the developer journey.",
+
+        technologies: [
+          "React",
+          "TypeScript",
+          "Vite",
+        ],
+
+        status: "In Development",
+
+        featured: true,
+
+        href: "/projects/kambing-gunung-platform",
+
+        gallery: [
+          huruf3,
+          huruf4,
+          huruf5,
+          huruf1,
+          huruf2,
+        ],
+      },
+    ],
+
+    cta: {
+      label: "View All Projects",
+      href: "/projects",
+    },
+  },
 };

@@ -28,4 +28,6 @@ body {
     font-size: var(--fs-body);
 
     line-height: var(--lh-very-loose);
+
+    overflow-x: hidden;
 }
