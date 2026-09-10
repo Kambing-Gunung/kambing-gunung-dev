@@ -31,11 +31,7 @@ function FeaturedProjects() {
   };
 
   return (
-    <Section
-      as="section"
-      size="lg"
-      className={styles.featuredProjects}
-    >
+    <Section as="section" size="lg" className={styles.featuredProjects}>
       <Container as="div" size="xl">
         <div className={styles.scene}>
 

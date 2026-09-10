@@ -76,7 +76,7 @@ Sprint 5.3
 
 Current Focus
 
-Featured Projects Implementation
+Journey Section Implementation
 
 ---
 
