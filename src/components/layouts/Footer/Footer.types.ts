@@ -1,6 +1,6 @@
-import type { HTMLAttributes, ReactNode } from "react";
+import type { HTMLAttributes } from "react";
 
-export interface FooterProps extends Readonly<HTMLAttributes<HTMLElement>> {
+export interface FooterProps
+  extends Readonly<HTMLAttributes<HTMLElement>> {
   className?: string;
-  children?: ReactNode;
 }

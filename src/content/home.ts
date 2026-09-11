@@ -9,6 +9,8 @@ import project1_2 from "@/assets/images/featured-projects/project-1/project-1_2.
 import project1_3 from "@/assets/images/featured-projects/project-1/project-1_3.png";
 import project1_4 from "@/assets/images/featured-projects/project-1/project-1_4.png";
 
+import icon from "@/assets/images/contact/fire.png";
+
 export const home = {
   hero: {
     intro: {
@@ -528,5 +530,39 @@ export const home = {
           "Today, I am still deepening my software engineering foundation while continuing to explore game development.",
       },
     ],
+  },
+
+  contact: {
+    title: "Let's Connect",
+
+    description:
+      "Let's build something great together.",
+
+    contacts: [
+      {
+        id: "email",
+        icon: icon,
+        label: "Email",
+        value: "Let's talk via email",
+        href: "mailto:davidntb7000@gmail.com",
+      },
+      {
+        id: "github",
+        icon: icon,
+        label: "GitHub",
+        value: "Check out my repositories",
+        href: "https://github.com/Kambing-Gunung",
+      },
+      {
+        id: "linkedin",
+        icon: icon,
+        label: "LinkedIn",
+        value: "Connect and let's grow together",
+        href: "https://linkedin.com/in/davidntb",
+      },
+    ],
+
+    closing:
+      "Thanks for being here. Let's rest for now, the journey continues ...",
   },
 };
