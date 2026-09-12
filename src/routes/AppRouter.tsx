@@ -8,14 +8,16 @@ import JourneyPage from "@/pages/JourneyPage";
 import ResumePage from "@/pages/ResumePage";
 import NotFoundPage from "@/pages/NotFoundPage";
 
+import { ROUTES } from "@/routes/paths";
+
 function AppRouter() {
     return (
         <Routes>
             <Route element={<MainLayout />}>
                 <Route index element={<HomePage />} />
-                <Route path="projects" element={<ProjectsPage />} />
-                <Route path="journey" element={<JourneyPage />} />
-                <Route path="resume" element={<ResumePage />} />
+                <Route path={ROUTES.projects.slice(1)} element={<ProjectsPage />} />
+                <Route path={ROUTES.journey.slice(1)} element={<JourneyPage />} />
+                <Route path={ROUTES.resume.slice(1)} element={<ResumePage />} />
                 <Route path="*" element={<NotFoundPage />} />
             </Route>
         </Routes>

@@ -1,4 +1,4 @@
-import keyboardImage from "@/assets/images/Keyboard.png";
+import keyboardImage from "@/assets/images/computer/keyboard.png";
 
 import styles from "./Keyboard.module.css";
 

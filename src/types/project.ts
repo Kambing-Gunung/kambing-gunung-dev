@@ -1,11 +1,11 @@
 export type FeaturedProject = {
-  id: string;
-  name: string;
-  category: string;
-  description: string;
-  technologies: string[];
-  status: string;
-  featured: boolean;
-  href: string;
-  gallery: string[];
+  readonly id: string;
+  readonly name: string;
+  readonly category: string;
+  readonly description: string;
+  readonly technologies: readonly string[];
+  readonly status: string;
+  readonly featured: boolean;
+  readonly href: string;
+  readonly gallery: readonly string[];
 };

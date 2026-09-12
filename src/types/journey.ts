@@ -1,6 +1,6 @@
 export type Journey = {
-  id: string;
-  title: string;
-  period: string;
-  description: string;
+  readonly id: string;
+  readonly title: string;
+  readonly period: string;
+  readonly description: string;
 };

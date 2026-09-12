@@ -32,6 +32,30 @@ The website should:
 
 ---
 
+# Architecture Alignment
+
+This design system is intentionally aligned with [docs/development/architecture.md](../development/architecture.md).
+
+The design direction must respect the application layer boundaries:
+
+- `routes/` defines navigation and page flow
+- `pages/` composes route-level layouts
+- `components/sections/` owns feature-specific composition
+- `components/ui/` owns reusable visual primitives
+- `styles/` owns design tokens, shared visual rules, and utilities
+
+This means visual system decisions should support the architecture, not override it.
+
+The project uses a layered styling approach:
+
+- Tailwind for layout, spacing, positioning, and structural utility
+- CSS Design System for tokens and shared visual rules
+- CSS Modules for feature-scoped styling and local composition
+
+The design system must stay reusable and clear without forcing a full rewrite of the existing CSS strategy.
+
+---
+
 # Emotional Composition
 
 The visual atmosphere follows four emotional pillars.

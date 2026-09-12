@@ -15,16 +15,34 @@ Tujuan utama Layout Components adalah:
 
 ---
 
+## Architecture Alignment
+
+Dokumen ini juga merupakan bagian dari arsitektur project yang dijelaskan di [docs/development/architecture.md](../development/architecture.md).
+
+Pada level architecture, layout primitives adalah bagian dari layer structural composition yang berada di bawah Pages dan di atas UI primitives.
+
+Arti pentingnya:
+
+- `pages/` mengatur halaman dan route composition
+- `components/sections/` mengisi bagian feature/page
+- `components/layout/` menyediakan reusable layout primitives yang konsisten
+- `components/navigation/` menyediakan shared navigation dan compositional navigation patterns
+- `components/ui/` menyediakan primitive visual reusable
+
+Dengan alasan ini, layout primitives tidak boleh dibebani dengan business logic, content domain, atau keputusan routing yang seharusnya hidup di layer lain.
+
+---
+
 ## Terminology
 
 Dokumen ini menggunakan beberapa istilah berikut.
 
 | Term | Description |
 |------|-------------|
-| Layout Component | Komponen yang bertanggung jawab terhadap struktur halaman. |
+| Layout Primitive | Komponen yang bertanggung jawab terhadap struktur halaman dasar, seperti Container, Section, Stack, dan Grid. |
+| Navigation Component | Komponen yang bertanggung jawab terhadap shared navigation dan navigasi aplikasi, seperti Navbar, Footer, dan SocialLinks. |
 | UI Component | Komponen yang bertanggung jawab terhadap tampilan dan interaksi. |
-| Primitive Layout | Komponen layout dasar seperti Container, Section, Stack, dan Grid. |
-| Composite Layout | Komponen layout yang dibangun dari beberapa Primitive Layout, seperti Navbar dan Footer. |
+| App Layout | Layout level aplikasi yang mengatur komposisi global halaman, seperti `layouts/MainLayout.tsx`. |
 
 ---
 
@@ -101,9 +119,9 @@ Layout Components tidak bertanggung jawab terhadap:
 - Section
 - Stack
 - Grid
-- Navbar
-- Footer
-- Social Links
+- Navigation patterns and app-level composition
+
+> Navbar, Footer, dan SocialLinks didokumentasikan sebagai navigation components, bukan sebagai layout primitives atau composite layout.
 
 ---
 
@@ -580,7 +598,7 @@ Navbar harus sederhana, konsisten, dan mudah dikenali pada setiap halaman.
 
 Navbar bukan tempat untuk menampilkan seluruh informasi, melainkan membantu pengguna berpindah antar halaman.
 
-Navbar dibangun menggunakan Layout Components yang telah tersedia sehingga tetap konsisten dengan sistem layout secara keseluruhan.
+Navbar dibangun menggunakan layout primitives yang tersedia sehingga tetap konsisten dengan sistem layout secara keseluruhan, tetapi secara ownership ia termasuk dalam `components/navigation/`.
 
 ---
 
@@ -730,7 +748,7 @@ Footer merupakan penutup halaman yang menyediakan informasi tambahan serta akses
 
 Footer melengkapi halaman dengan informasi yang tidak termasuk ke dalam navigasi utama.
 
-Footer dibangun menggunakan Layout Components sehingga tetap konsisten dengan struktur halaman.
+Footer dibangun menggunakan layout primitives sehingga tetap konsisten dengan struktur halaman, tetapi ia termasuk dalam `components/navigation/` sebagai navigation component.
 
 ---
 
@@ -1338,17 +1356,17 @@ Implementasi hanya dilakukan ketika terdapat kebutuhan nyata selama proses penge
 
 # Dependency Graph
 
-Primitive Layout Components harus diimplementasikan terlebih dahulu sebelum Composite Layout Components.
+Layout primitives adalah fondasi komposisi struktural, sementara navigation components tetap berdiri sebagai concern yang terpisah.
 
-| Component | Depends On |
-|-----------|------------|
-| Container | — |
-| Section | — |
-| Stack | — |
-| Grid | — |
-| Navbar | Container, Stack |
-| Footer | Section, Container, Stack |
-| Social Links | — |
+| Component | Depends On | Ownership |
+|-----------|------------|-----------|
+| Container | — | `components/layout` |
+| Section | — | `components/layout` |
+| Stack | — | `components/layout` |
+| Grid | — | `components/layout` |
+| Navbar | Container, Stack | `components/navigation` |
+| Footer | Section, Container, Stack | `components/navigation` |
+| Social Links | — | `components/navigation` |
 
 ---
 
@@ -1364,7 +1382,7 @@ Urutan implementasi yang direkomendasikan.
 6. Footer
 7. Social Links
 
-Primitive Layout Components diimplementasikan terlebih dahulu, kemudian digunakan untuk membangun Composite Layout Components.
+Layout primitives diimplementasikan terlebih dahulu, dan navigation components kemudian dibangun di atas boundary ownership yang jelas.
 
 ---
 
@@ -1373,11 +1391,11 @@ Primitive Layout Components diimplementasikan terlebih dahulu, kemudian digunaka
 | Property | Value |
 |----------|-------|
 | Sprint | 4 |
-| Version | 1.0 |
-| Status | Frozen |
+| Version | 1.1 |
+| Status | Baseline Stable |
 | Ready for Implementation | Yes |
 
-Perubahan terhadap dokumen ini setelah status **Frozen** harus melalui Engineering Review sebelum diimplementasikan.
+Perubahan terhadap dokumen ini harus tetap mengacu pada ownership yang terepresentasi di source saat ini; perubahan yang bersifat cosmetic atau teoritis tidak disarankan tanpa kebutuhan nyata yang teramati.
 
 ---
 

@@ -22,7 +22,7 @@
 
 .kickerContainer {
     margin-bottom: var(--space-4);
-    
+
     font-family: var(--font-display);
     font-size: var(--fs-heading-xl);
     font-weight: var(--fw-black);
@@ -30,7 +30,7 @@
     line-height: var(--lh-very-tight);
     letter-spacing: var(--ls-wide);
     text-transform: uppercase;
-    
+
     white-space: nowrap;
 }
 
@@ -76,19 +76,18 @@
     margin-bottom: var(--space-8);
 
     font-family: var(--font-display);
-    font-size: var(--fs-heading-sm);
+    font-size: var(--fs-body-lg);
     font-weight: var(--fw-semibold);
     line-height: var(--lh-tight);
-    
+
     color: var(--color-primary);
 }
 
 .description {
-    max-width: 28rem;
-    margin-bottom: var(--space-12);
+    max-width: 32rem;
     font-family: var(--font-primary);
     font-size: var(--fs-body-lg);
-
+    
     line-height: var(--lh-loose);
     
     color: var(--color-text-secondary);
@@ -96,6 +95,7 @@
 
 .tag {
     max-width: 28rem;
+    margin-bottom: var(--space-12);
     text-align: right;
     font-family: var(--font-display);
     font-size: var(--fs-overline);
@@ -117,27 +117,42 @@
     max-width: 760px;
 
     display: block;
-}
 
-.visual::before {
-    content: "";
+    border-radius: var(--radius-xl);
 
-    position: absolute;
-    inset: 0;
+    -webkit-mask-image:
+        linear-gradient(
+            to right,
+            transparent 10%,
+            black 40%,
+            black 80%,
+            transparent 100%
+        ),
+        linear-gradient(
+            to bottom,
+            transparent 0%,
+            black 20%,
+            black 80%,
+            transparent 100%
+        );
 
-    z-index: 2;
+    -webkit-mask-composite: source-in;
 
-    background:
-        linear-gradient(to right,
-            var(--color-background-primary) 0%,
-            transparent 40%,
-            transparent 90%,
-            var(--color-background-primary) 100%),
-        linear-gradient(to bottom,
-            var(--color-background-primary) 0%,
-            transparent 12%,
-            transparent 88%,
-            var(--color-background-primary) 100%);
+    mask-image:
+        linear-gradient(
+            to right,
+            transparent 10%,
+            black 40%,
+            black 80%,
+            transparent 100%
+        ),
+        linear-gradient(
+            to bottom,
+            transparent 0%,
+            black 20%,
+            black 80%,
+            transparent 100%
+        );
 
-    pointer-events: none;
+    mask-composite: intersect;
 }

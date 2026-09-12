@@ -1,10 +1,9 @@
-import Container from "@/components/layouts/Container";
-import Section from "@/components/layouts/Section";
+import { Container, Section } from "@/components/layout";
 import { home } from "@/content/home";
 import JourneyDetail from "./JourneyDetail/JourneyDetail";
 
-import journeySky from "@/assets/images/journey/journey-sky.png";
-import journeyClouds from "@/assets/images/journey/journey-cloud.png";
+import journeySky from "@/assets/scenes/journey/journey-sky.png";
+import journeyClouds from "@/assets/scenes/journey/journey-cloud.png";
 
 import styles from "./Journey.module.css";
 

@@ -13,6 +13,58 @@ Komponen harus konsisten, reusable, mudah dipelihara, dan mengutamakan accessibi
 
 ---
 
+# Architecture Alignment
+
+Dokumen ini harus dibaca bersama dengan [docs/development/architecture.md](../development/architecture.md).
+
+Tujuan utama dari alignment ini adalah memastikan bahwa component guidelines tidak terlepas dari contract arsitektur proyek.
+
+## Boundary Rules
+
+### UI Components
+
+`components/ui` adalah layer shared UI primitives.
+
+Komponen di sini harus:
+
+- reusable
+- generik
+- tidak spesifik terhadap halaman
+- tidak mengandung business logic tertentu
+
+### Section Components
+
+`components/sections` adalah layer feature/page composition.
+
+Komponen di sini boleh lebih kompleks, tetapi tetap fokus pada satu concern yang jelas dan tidak dipaksa menjadi abstraction global.
+
+### Layout Components
+
+`components/layout` adalah layer reusable layout primitives. Tanggung jawabnya adalah pengelompokan, spacing, alignment, dan konsistensi struktur visual.
+
+Komponen yang termasuk di sini:
+
+- Container
+- Grid
+- Section
+- Stack
+
+### Navigation Components
+
+`components/navigation` adalah shared navigation dan komponen navigasi level aplikasi.
+
+Komponen yang termasuk di sini:
+
+- Navbar
+- Footer
+- SocialLinks
+
+Navigasi bukan layout primitive dan tidak lagi dikategorikan sebagai composite layout.
+
+Bukan tugas UI component untuk menangani routing, halaman, atau business logic.
+
+---
+
 # Design Philosophy
 
 Seluruh komponen harus merepresentasikan identitas visual Kambing Gunung.

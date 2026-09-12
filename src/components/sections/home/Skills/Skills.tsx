@@ -1,9 +1,8 @@
-import skillsBg from "@/assets/images/skills-bg.png";
+import skillsBg from "@/assets/images/computer/bg.png";
 
-import Container from "@/components/layouts/Container";
-import Section from "@/components/layouts/Section";
+import { Container, Section } from "@/components/layout";
 
-import Computer from "./computer/Computer";
+import Computer from "./Computer/Computer";
 import styles from "./Skills.module.css";
 
 function Skills() {

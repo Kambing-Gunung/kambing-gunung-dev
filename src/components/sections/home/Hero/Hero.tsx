@@ -1,4 +1,4 @@
-import { Section } from "@/components/layouts";
+import { Section } from "@/components/layout";
 
 import HeroIntro from "./HeroIntro";
 import HeroContent from "./HeroContent";

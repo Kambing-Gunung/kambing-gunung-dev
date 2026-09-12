@@ -1,12 +1,12 @@
-import monitorImage from "@/assets/images/Monitor.png";
+import monitorImage from "@/assets/images/computer/monitor.png";
 
-import KgOsScreen from "../kg-os/KgOsScreen";
+import KgOsScreen from "../KGOS/KgOsScreen";
 
-import CrtDistortion from "../crt/CrtDistortion";
-import CrtGlass from "../crt/CrtGlass";
-import CrtNoise from "../crt/CrtNoise";
-import CrtOverlay from "../crt/CrtOverlay";
-import CrtGlow from "../crt/CrtGlow";
+import CrtDistortion from "../CRT/CrtDistortion";
+import CrtGlass from "../CRT/CrtGlass";
+import CrtNoise from "../CRT/CrtNoise";
+import CrtOverlay from "../CRT/CrtOverlay";
+import CrtGlow from "../CRT/CrtGlow";
 
 import styles from "./Monitor.module.css";
 

@@ -61,3 +61,26 @@
 | Warning | Cabin 400 |
 | Danger | Glow 500 |
 | Info | Sky 300 |
+
+---
+
+# Styling Architecture Usage
+
+Design tokens are part of the CSS Design System layer described in [docs/development/architecture.md](../development/architecture.md).
+
+This means tokens are intended to be consumed by:
+
+- shared visual foundations
+- component styling
+- design system utilities
+- CSS Modules for targeted feature styling
+
+Tokens should be used before raw values are introduced.
+
+The following usage principle applies:
+
+- Tailwind handles layout concerns and structural utilities
+- CSS tokens provide visual consistency
+- CSS Modules keep section-level styling scoped and maintainable
+
+This keeps design decisions consistent without forcing the entire project into a single styling mechanism in one refactor.

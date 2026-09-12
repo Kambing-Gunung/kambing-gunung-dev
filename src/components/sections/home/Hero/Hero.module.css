@@ -1,7 +1,25 @@
 .hero {
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
     isolation: isolate;
 
     background: var(--color-background-primary);
+}
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+    z-index: -1;
+
+    left: 0;
+    right: 0;
+    bottom: -50px;
+
+    height: 300px;
+
+    background: linear-gradient(to top,
+            var(--color-background-primary-midnight) 0%, var(--color-background-primary) 100%);
+
+    pointer-events: none;
 }

@@ -1,12 +1,11 @@
 import { useState } from "react";
 
-import Container from "@/components/layouts/Container";
-import Section from "@/components/layouts/Section";
+import { Container, Section } from "@/components/layout";
 
-import skyCity from "@/assets/images/featured-projects/featured-projects-sky.png";
-import board from "@/assets/images/featured-projects/featured-projects-board.png";
+import skyCity from "@/assets/scenes/featured-projects/projects-sky.png";
+import board from "@/assets/scenes/featured-projects/quest-board.png";
 
-import Divider from "@/components/ui/Divider";
+import { Divider } from "@/components/ui";
 
 import ProjectPaper from "./ProjectPaper/ProjectPaper";
 import ProjectDetail from "./ProjectDetail/ProjectDetail";

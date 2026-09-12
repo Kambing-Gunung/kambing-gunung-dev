@@ -1,4 +1,4 @@
-import { Container } from "@/components/layouts";
+import { Container } from "@/components/layout";
 import { common } from "@/content/common";
 import { home } from "@/content/home";
 
@@ -21,7 +21,7 @@ function HeroIntro() {
                         <p className={styles.description}>{intro.description}</p>
 
                         <div className={styles.scrollIndicator}>
-                            <p className={styles.scrollText}>Explore</p>
+                            <p className={styles.scrollText}>{intro.scrollIndicator}</p>
 
                             <div className={styles.scrollArrow}>
                                 <span>﹀</span>

@@ -7,6 +7,7 @@
 
   display: flex;
   align-items: center;
+  background: var(--color-background-primary-midnight);
 }
 
 .about::after {
@@ -21,15 +22,13 @@
 
   height: 400px;
 
-  background: linear-gradient(
-  to bottom,
-  transparent 0%,
-  rgba(0, 0, 0, 0.08) 20%,
-  rgba(0, 0, 0, 0.25) 40%,
-  rgba(0, 0, 0, 0.55) 65%,
-  rgba(0, 0, 0, 0.85) 85%,
-  #000 100%
-);
+  background: linear-gradient(to bottom,
+      transparent 0%,
+      rgba(0, 0, 0, 0.08) 20%,
+      rgba(0, 0, 0, 0.25) 40%,
+      rgba(0, 0, 0, 0.55) 65%,
+      rgba(0, 0, 0, 0.85) 85%,
+      #000 100%);
 
   pointer-events: none;
 }
@@ -55,34 +54,42 @@
   max-width: 760px;
 
   display: block;
-}
 
-.visual::before {
-  content: "";
+  border-radius: var(--radius-xl);
 
-  position: absolute;
-  inset: 0;
-
-  z-index: 3;
-
-  background:
-    linear-gradient(to left,
-      var(--color-background-primary) 0%,
-      transparent 40%,
-      transparent 90%,
-      var(--color-background-primary) 100%),
+  -webkit-mask-image:
+    linear-gradient(to right,
+      transparent 0%,
+      black 20%,
+      black 60%,
+      transparent 100%),
     linear-gradient(to bottom,
-      var(--color-background-primary) 0%,
-      transparent 12%,
-      transparent 88%,
-      var(--color-background-primary) 100%);
+      transparent 0%,
+      black 20%,
+      black 80%,
+      transparent 100%);
 
-  pointer-events: none;
+  -webkit-mask-composite: source-in;
+
+  mask-image:
+    linear-gradient(to right,
+      transparent 0%,
+      black 20%,
+      black 60%,
+      transparent 100%),
+    linear-gradient(to bottom,
+      transparent 0%,
+      black 20%,
+      black 80%,
+      transparent 100%);
+
+  mask-composite: intersect;
 }
 
 .ctaActions {
   display: flex;
   justify-content: center;
+  padding-left: 100px;
   gap: var(--space-6);
 }
 
@@ -143,7 +150,7 @@
 }
 
 .description {
-  width: 100%;
+  width: 32rem;
   margin-bottom: var(--space-4);
 
   font-family: var(--font-primary);

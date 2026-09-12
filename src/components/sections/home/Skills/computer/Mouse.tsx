@@ -1,4 +1,4 @@
-import mouseImage from "@/assets/images/Mouse.png";
+import mouseImage from "@/assets/images/computer/mouse.png";
 
 import styles from "./Mouse.module.css";
 

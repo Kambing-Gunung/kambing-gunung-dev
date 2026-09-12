@@ -1,4 +1,4 @@
-import towerImage from "@/assets/images/Tower.png";
+import towerImage from "@/assets/images/computer/tower.png";
 
 import styles from "./Tower.module.css";
 

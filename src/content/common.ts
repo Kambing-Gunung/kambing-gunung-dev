@@ -1,5 +1,7 @@
 import brandLogo from "@/assets/logos/kambing-gunung.png";
 
+import { ROUTES } from "@/routes/paths";
+
 export const common = {
   developer: {
     fullName: "David Wahyu Herdyansyah",
@@ -9,34 +11,30 @@ export const common = {
   brand: {
     name: "Kambing Gunung",
     logo: brandLogo,
-    href: "/",
+    href: ROUTES.home,
   },
-
-  social: {},
-
-  contact: {},
 
   navigation: {
     primary: [
       {
         label: "Home",
-        to: "/",
+        to: ROUTES.home,
       },
       {
         label: "Projects",
-        to: "/projects",
+        to: ROUTES.projects,
       },
       {
         label: "Journey",
-        to: "/journey",
+        to: ROUTES.journey,
       },
       {
         label: "Documentation",
-        to: "/documentation",
+        to: ROUTES.documentation,
       },
       {
         label: "Contact",
-        to: "/contact",
+        to: ROUTES.contact,
       },
     ],
   },

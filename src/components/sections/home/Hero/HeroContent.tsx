@@ -1,10 +1,10 @@
-import { Container } from "@/components/layouts";
+import { Container } from "@/components/layout";
 import { common } from "@/content/common";
 import { home } from "@/content/home";
 
 import styles from "./HeroContent.module.css";
 
-import developerPlaceholder from "@/assets/images/ilust.png";
+import developerPlaceholder from "@/assets/images/hero/ilust.png";
 import Divider from "@/components/ui/Divider";
 
 function HeroContent() {

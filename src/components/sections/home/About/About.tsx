@@ -1,11 +1,11 @@
-import { Container, Section } from "@/components/layouts";
+import { Container, Section } from "@/components/layout";
 
 import Button from "@/components/ui/Button";
 
 import { common } from "@/content/common";
 import { home } from "@/content/home";
 
-import aboutIllustration from "@/assets/images/ilust2.png";
+import aboutIllustration from "@/assets/images/hero/ilust2.png";
 
 import styles from "./About.module.css";
 import Divider from "@/components/ui/Divider";
@@ -13,7 +13,6 @@ import Divider from "@/components/ui/Divider";
 
 function About() {
   const { about } = home;
-  const { developer } = common;
 
   return (
     <Section as="section" size="lg" className={styles.about}>

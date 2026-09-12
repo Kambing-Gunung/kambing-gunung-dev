@@ -1,13 +1,12 @@
 import type { CSSProperties } from "react";
 
-import Container from "@/components/layouts/Container";
-import Section from "@/components/layouts/Section";
-import Divider from "@/components/ui/Divider";
+import { Container, Section } from "@/components/layout";
+import { Divider } from "@/components/ui";
 import { home } from "@/content/home";
 
-import contactMountain from "@/assets/images/contact/contactMountain.png";
-import contactCampsite from "@/assets/images/contact/contactCampsite.png";
-import contactForeground from "@/assets/images/contact/contactForeground.png";
+import contactMountain from "@/assets/scenes/contact/contactMountain.png";
+import contactCampsite from "@/assets/scenes/contact/contactCampsite.png";
+import contactForeground from "@/assets/scenes/contact/contactForeground.png";
 import fire from "@/assets/images/contact/fire.png";
 
 import styles from "./Contact.module.css";
