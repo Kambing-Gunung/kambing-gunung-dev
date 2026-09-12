@@ -1,0 +1,43 @@
+:root {
+    /* FONT FAMILY */
+    --font-primary: "Geist Pixel", sans-serif;
+    --font-secondary: "Tiny5", sans-serif;
+    --font-brand: "Press Start 2P", monospace;
+    --font-display: "Early GameBoy", monospace;
+    --font-terminal: "VT323", monospace;
+    --font-navbar: "Pixel Comic Sans", sans-serif;
+    --font-accent: "Manrope", sans-serif;
+
+    /* FONT SIZE */
+    --fs-display-sm: clamp(2.5rem, 5vw, 4rem);
+    --fs-display-md: clamp(3.5rem, 7vw, 5rem);
+    --fs-display-lg: clamp(5rem, 10vw, 8rem);
+
+    --fs-heading-sm: clamp(1rem, 2vw, 1.25rem);
+    --fs-heading-md: clamp(1.25rem, 2.5vw, 1.5rem);
+    --fs-heading-lg: clamp(1.5rem, 3vw, 1.875rem);
+    --fs-heading-xl: clamp(2rem, 4vw, 2.25rem);
+
+    --fs-body-sm: clamp(0.875rem, 1vw, 0.9375rem);
+    --fs-body-md: clamp(1rem, 1.2vw, 1.0625rem);
+    --fs-body-lg: clamp(1.125rem, 1.4vw, 1.25rem);
+
+    /* FONT WEIGHT */
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+
+    /* LINE HEIGHT */
+    --lh-tight: 1;
+    --lh-normal: 1.25;
+    --lh-relaxed: 1.5;
+    --lh-loose: 1.75;
+
+    /* LETTER SPACING */
+    --ls-very-tight: -0.1em;
+    --ls-tight: -0.05em;
+    --ls-normal: 0;
+    --ls-wide: 0.05em;
+    --ls-very-wide: 0.1em;
+}

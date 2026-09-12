@@ -1,8 +1,8 @@
+import { Test } from "@/components/sections/projects";
+
 function ProjectsPage() {
     return (
-        <section>
-            <h1>Projects</h1>
-        </section>
+        <Test />
     );
 }
 

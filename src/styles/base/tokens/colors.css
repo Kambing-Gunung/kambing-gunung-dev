@@ -1,0 +1,51 @@
+:root {
+   /* PRIMITIVE COLORS */
+   --night-700: #02151C;
+   --night-800: #00031C;
+
+   --moon-100: #F7F9FC;
+   --moon-200: #D6DFEA;
+   --moon-300: #9FAFC2;
+   --moon-400: #7D8C9F;
+   --moon-700: #37424D;
+   --moon-800: #29333C;
+   --moon-900: #141B21;
+
+   --glow-400: #E68C88;
+
+   --cabin-300: #FFD178;
+   --cabin-500: #E89C28;
+   --cabin-600: #C97B18;
+   --cabin-700: #8A5312;
+   --cabin-800: #5F3C08;
+   --cabin-900: #1E1202;
+
+   /* SEMANTIC COLORS */
+   --color-background-primary: var(--night-700);
+   --color-background-secondary: var(--night-800);
+
+   --color-border-subtle: var(--moon-800);
+   --color-border-default: var(--moon-700);
+   --color-border-strong: var(--moon-400);
+
+   --color-text-primary: var(--moon-100);
+   --color-text-secondary: var(--moon-200);
+   --color-text-muted: var(--moon-300);
+   --color-text-dark: var(--moon-900);
+
+   --color-brand-glow: var(--glow-400);
+   --color-brand-cabin: var(--cabin-300);
+
+   --color-success: #22C55E;
+   --color-warning: #F59E0B;
+   --color-danger: #EF4444;
+   --color-info: #3882F6;
+
+   --color-terminal-primary: var(--cabin-500);
+   --color-terminal-secondary: var(--cabin-600);
+   --color-terminal-background: var(--cabin-900);
+   --color-terminal-muted: var(--cabin-700);
+   --color-terminal-border: var(--cabin-800);
+   --color-terminal-hover: rgba(210, 144, 33, 0.06);
+   --color-terminal-active: rgba(210, 144, 33, 0.09);
+}

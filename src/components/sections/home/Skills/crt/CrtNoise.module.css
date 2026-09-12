@@ -15,7 +15,7 @@
       currentColor 3px
     );
 
-  background-color: var(--color-background-terminal);
+  background-color: var(--color-terminal-background);
 
   z-index: 4;
 }

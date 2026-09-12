@@ -1,90 +1,170 @@
-/* ========================================
-   TYPOGRAPHY - Type Scale & Text Variants
-   ======================================== */
+/* FONT FAMILIES */
 
-/* Font Families */
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Press+Start+2P&family=VT323&display=swap');
+@font-face {
+    font-family: "Geist Pixel";
+    src: url("../../assets/fonts/GeistPixel-Square.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
 
-/* Display - Hero Titles */
-.display {
-    font-size: var(--fs-display);
-    font-weight: var(--fw-bold);
+@font-face {
+    font-family: "Tiny5";
+    src: url("../../assets/fonts/Tiny5-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Press Start 2P";
+    src: url("../../assets/fonts/PressStart2P.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "VT323";
+    src: url("../../assets/fonts/VT323-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Manrope";
+    src: url("../../assets/fonts/Manrope-Regular.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Cute Pixel";
+    src: url("../../assets/fonts/CutePixel.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "X12y16pxSolidLinker";
+    src: url("../../assets/fonts/x12y16pxSolidLinker.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/* GLOBAL TYPOGRAPHY */
+
+h1,
+h2,
+h3,
+h4,
+p {
+    margin: 0;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+
+/* DISPLAY */
+
+.display-sm {
+    font-family: var(--font-display);
+    font-size: var(--fs-display-sm);
+    font-weight: var(--fw-regular);
     line-height: var(--lh-tight);
     letter-spacing: var(--ls-normal);
 }
 
-/* Heading 1 - Page Titles */
+.display-md {
+    font-family: var(--font-display);
+    font-size: var(--fs-display-md);
+    font-weight: var(--fw-regular);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--ls-normal);
+}
+
+.display-lg {
+    font-family: var(--font-display);
+    font-size: var(--fs-display-lg);
+    font-weight: var(--fw-regular);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--ls-normal);
+}
+
+
+/* HEADINGS */
+
 h1 {
-    font-size: var(--fs-h1);
-    font-weight: var(--fw-bold);
+    font-family: var(--font-display);
+    font-size: var(--fs-heading-xl);
+    font-weight: var(--fw-regular);
     line-height: var(--lh-tight);
     letter-spacing: var(--ls-normal);
-    margin: 0;
 }
 
-/* Heading 2 - Section Titles */
 h2 {
-    font-size: var(--fs-h2);
-    font-weight: var(--fw-semibold);
+    font-family: var(--font-display);
+    font-size: var(--fs-heading-lg);
+    font-weight: var(--fw-regular);
     line-height: var(--lh-normal);
     letter-spacing: var(--ls-normal);
-    margin: 0;
 }
 
-/* Heading 3 - Card Titles */
 h3 {
-    font-size: var(--fs-h3);
+    font-family: var(--font-display);
+    font-size: var(--fs-heading-md);
     font-weight: var(--fw-semibold);
     line-height: var(--lh-normal);
     letter-spacing: var(--ls-normal);
-    margin: 0;
 }
 
-/* Heading 4 - Small Section Titles */
 h4 {
-    font-size: var(--fs-h4);
+    font-family: var(--font-display);
+    font-size: var(--fs-heading-sm);
     font-weight: var(--fw-semibold);
     line-height: var(--lh-relaxed);
     letter-spacing: var(--ls-normal);
-    margin: 0;
 }
 
-/* Body Large - Intro Paragraphs */
+
+/* BODY */
+
 .body-lg {
+    font-family: var(--font-primary);
     font-size: var(--fs-body-lg);
     font-weight: var(--fw-regular);
-    line-height: var(--lh-very-loose);
+    line-height: var(--lh-relaxed);
     letter-spacing: var(--ls-normal);
 }
 
-/* Body Small - Secondary Content */
+.body-md {
+    font-family: var(--font-primary);
+    font-size: var(--fs-body-md);
+    font-weight: var(--fw-regular);
+    line-height: var(--lh-relaxed);
+    letter-spacing: var(--ls-normal);
+}
+
 .body-sm {
+    font-family: var(--font-primary);
     font-size: var(--fs-body-sm);
     font-weight: var(--fw-regular);
-    line-height: var(--lh-loose);
+    line-height: var(--lh-relaxed);
     letter-spacing: var(--ls-normal);
 }
 
-/* Caption - Labels & Helper Text */
-.caption {
-    font-size: var(--fs-caption);
-    font-weight: var(--fw-regular);
-    line-height: var(--lh-loose);
-    letter-spacing: var(--ls-normal);
-}
 
-/* Overline - Small Uppercase Labels */
-.overline {
-    font-size: var(--fs-overline);
-    font-weight: var(--fw-semibold);
-    line-height: var(--lh-loose);
-    letter-spacing: var(--ls-wide);
-    text-transform: uppercase;
-}
-
-/* ========================================
-   TEXT COLORS - Color Variants
-   ======================================== */
+/* TEXT COLORS */
 
 .text-primary {
     color: var(--color-text-primary);
@@ -98,24 +178,18 @@ h4 {
     color: var(--color-text-muted);
 }
 
-.text-disabled {
-    color: var(--color-text-disabled);
+.text-dark {
+    color: var(--color-text-dark);
 }
 
-/* Brand Colors */
-.text-primary-brand {
-    color: var(--color-primary);
+.text-brand-glow {
+    color: var(--color-brand-glow);
 }
 
-.text-secondary-brand {
-    color: var(--color-secondary);
+.text-brand-cabin {
+    color: var(--color-brand-cabin);
 }
 
-.text-highlight {
-    color: var(--color-highlight);
-}
-
-/* Feedback Colors */
 .text-success {
     color: var(--color-success);
 }
@@ -132,9 +206,8 @@ h4 {
     color: var(--color-info);
 }
 
-/* ========================================
-   TEXT STYLES - Font Weight & Decorations
-   ======================================== */
+
+/* FONT WEIGHT */
 
 .font-regular {
     font-weight: var(--fw-regular);
@@ -151,6 +224,9 @@ h4 {
 .font-bold {
     font-weight: var(--fw-bold);
 }
+
+
+/* TEXT ALIGNMENT */
 
 .text-center {
     text-align: center;

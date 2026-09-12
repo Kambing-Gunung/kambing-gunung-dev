@@ -1,4 +1,4 @@
-@import "./base/variables.css";
+@import "./base/token/index.css";
 @import "./base/typography.css";
 @import "./base/utilities.css";
 @import "./base/animations.css";
@@ -10,9 +10,15 @@
 @import "./components/divider.css";
 @import "./components/chip.css";
 
-html {
-    scroll-behavior: smooth;
-}
+/* GLOBAL RESET */
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+/* GLOBAL DOCUMENT */
+
+html { scroll-behavior: smooth; }
 
 body {
     margin: 0;
@@ -21,13 +27,13 @@ body {
     background: var(--color-background-primary);
     color: var(--color-text-primary);
 
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-primary);
+    font-size: var(--fs-body-md);
+    line-height: var(--lh-relaxed);
 
     -webkit-font-smoothing: antialiased;
 
-    font-size: var(--fs-body);
-
-    line-height: var(--lh-very-loose);
-
     overflow-x: hidden;
 }
+
+#root { min-height: 100vh; }
